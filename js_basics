@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/19 08:16:53 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/21 10:54:28 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/21 14:59:37 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -74,7 +74,7 @@ Source code => [ compiler  => virtual machine (lib modules) ] => Runing Code
 # INFO: [ KNOW I UNDERSTAND PYTHON INTERPRETER ] 
 # Compilation <From source code to bytecode>
   # Pyhton interpreter converts the entire script into bytecode.pyc(lower-level representation)
-# Excution < by PVM>  (python interprers: CPython, PyPy, MicroPython) 
+# Excution <by PVM>  (python interprers: CPython, PyPy, MicroPython) 
   # PVM takes the byte code & interpretes it INSTRUCTION BY INSTRUCTION
   # Each bytecode instruction is executed by dynamically converting it into machine code
 # This technique is called traditinal interpretation or byte interpretation 
@@ -299,6 +299,13 @@ Quesion: how FPU reads floating point value
 Floating-point (single precision) uses 32 bits and provides less precision (about 7 decimal digits), with a smaller range.
 Double precision uses 64 bits and provides more precision (about 15-17 decimal digits), with a larger range.
 - JavaScript uses double precision floating point for all its number types, allowing it to handle a wide range of values with relatively high precision. However, this can lead to rounding errors when dealing with very small or large numbers or performing certain calculations.
+> how problem occures ?
+  - fractional numbers that are not multiplied by 2 gives a long represenation or infinite
+    representaion, when put in it in mantissa it will be truncated, the precision will not
+    be exact, so when making some operations it lead to unlogical values.
+  ex:
+    0.1 ± 0.00011001100110011001100110011001100110011001100110011 ...
+    - it wil be truncated once it will be stored in mantissa
 
 > Solution:
   - toFixed() => convert to fixed-point representation 
@@ -365,7 +372,7 @@ Double precision uses 64 bits and provides more precision (about 15-17 decimal d
 - Math.PI
 ...
 
-# NOTE:> VERY IMPORTANT
+# NOTE:> VERY IMPORTANT ==================================================================
 # - two's complement is the standard method used in computer systems to represent negative integers in memory. (for signed integers) 
 # In Math: Complement refers to the difference between a number and a specified base
 # ex: Complement of set A are the elements of set U that are not in A
@@ -382,6 +389,172 @@ Double precision uses 64 bits and provides more precision (about 15-17 decimal d
 # , responsible to handle arithmetic operations, +, -, *, /, &&, ||, NOT)
 # - (FPU: Floating point unit, is part responsable to read floating values)
 # - bias (for shifting) is used to simplify operations, ne need for complex operations to get exponent.
-# HINT: - when number exede it's max it be overflowed, Wraparound(shifting) is how this overflow is handled, but in general in undefind behaviour in most of compilers
+# HINT: - when number execeede it's max it be overflowed, Wraparound(shifting) is how this overflow is handled, but in general in undefind behaviour in most of compilers
 # WARNING:> it's only for floating-point exponent represenation
+# ========================================================================================
 
+===<[ js: Strings ]>============================================================
+- We can join to strings using '+' operator or <String Template>
+  ex: 
+  - 'hello, ${name}, form ${school}'
+  - samething close to bash approach 
+  - String is immutable, so it's stored in the heap, change its value will create a new one
+
+> Some Useful functions
+- charAt(index)
+- charCodeAt(index)
+- indexOf(str, indexStart)
+- search(regex)
+- includes(str)               : is exist in the main str, return boolean
+
+- substring(start, end)
+- slice(start, end)
+- split(separator, limit)
+
+- replace(regex, replacement)
+
+- startsWith(prefix)        : return boolean
+- endsWith(suffix)          : return boolean
+- match(regex)              : return boolean
+
+- toLowerCase()             
+- toUpperCase()
+- trim()                    : removes spaces
+- trimStart()               : removes from begening
+- trimEnd()                 : removes from end
+- padStart(length, char)    : add padding with char at first
+- padEnd(length, char)      : add padding with char in the end
+
+===<[ js: Arrays ]>============================================================
+
+> [ Syntax: ]
+  1_ let array = [e1, e2, ..., eN]
+  2_ let array = [
+    e1,
+    e2,
+    ...,
+    eN
+  ];
+  3_ let array = Array(e1, e2, ..., eN)
+
+> Loop over array
+  => for (index = 0; index < arr.length; index++) {
+    // arr[index];
+  }
+
+  => for (index in arr) {
+    // arr[index]
+  }
+
+  => for (elem of arr) {
+    // elem
+  }
+
+# NOTE:
+# _ arr.length similar to Java
+# _ for in does not garantie the index order (not recommended if order matters)
+
+> Useful Functions:
+  - toString()      : return "e1, e2, ..., eN" 
+  - joing(seprator) : return "e1'sep' e2'sep' ...'sep' eN" 
+  - pop()           : return the last & remove it 
+  - push()          : add in the last
+  - shitf()         : return the first & remove it
+  - slice(s, e)     : slice from start to end
+  - includes(value) : look for a value in array 
+  - indexof(ele)    : look for the first occurence of elem & return its index
+  - lastIndexOf(ele): look for the last occurenceo of elem & return its index
+  - sort()
+  - toSorted        : return copy of sorted array
+  - reverse()
+  - toReversed()    : return copy of reversed array
+  - keys()          : return iterator indexes
+  - values()        : return iterator values
+  - forEach(callbak): loop over elements without the need of loop
+
+
+===[ js: Functions ]>==========================================================
+> Syntax:
+  function name(args="default value") {
+    // statements
+    // return
+  }
+
+  - Variable-length Arguments (variadic functions in C/C++)
+  function name(..args) {
+    // statements
+    // for (let e of args) {
+    // statement
+    // }
+  }  
+# NOTE:> ...: is called Rest Parameter
+  - Anonymous Function
+    let functionName = function(args) {
+      // statement
+    }
+    - this expression is called <Expression Function>
+
+# TIP:========================================================================= 
+# - when we call a function before it's prototype, engine will define it
+# but when we call define it with Variable Expression it throw an error 
+# - _varName, can be used in case of conflict names (unkown between devalopers)
+# =============================================================================
+
+  - Arrow Function 
+    varFunction = (args) => {
+      // statement
+    }
+
+    - varFunction = () => // statement            : isOneStatemnt  == true
+    - varFunction = arg => // statement           : isOneArgOnly   == true
+    - varFunction = () => // variable             : it will be return without
+                                                                return keyword
+    - varFunction = (arg="default value") => {
+      // statement
+    }
+    - varFuction = (...arg) {
+      // statement 
+    }
+
+===<[ js: objects ]>============================================================
+  > Syntax:
+   objectName = {
+    property1: value1,
+    property2: function(args) {
+      // statement
+    },
+    property3: {
+      _property1: value1,
+      _property2: function() {
+        this.preperty1
+      }
+      ...
+    }
+    ...
+   }; 
+
+  - objectName.property
+  - objectName['property']
+
+  # NOTE: 
+  # - 'this' is in javascript is related to an Object called <Window>(each web page has a window)
+  # - calling 'this' only wil print a window object
+
+====<[ js: Errors Handling ]>===================================================
+> Types of errors
+
+  - Syntax Errors
+  - RunTime Errors (exceptions)
+  - Logical Errors
+
+  Syntax:
+    try {
+      // instructions 
+    } catch(error) {
+      // error handling code
+    } finally {
+      // code that will be executed no matter what
+    }
+
+# NOTE:
+# error: is an object that stores error data (error.name, error.message)
