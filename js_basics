@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/19 08:16:53 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/20 22:40:29 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/21 10:54:28 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -19,7 +19,7 @@
   - javascript versions:
   * ECMAScript1, 2, 3, 4, 5, 5.1, 6, 2016, 2017, 2018, 2019, ..., 2023
   - Javacript is considered an interpreter language, but it's engine (interpreter)
-  use JIT technique to improve preformance
+  use JIT technique to improve performance
   - Javascript engine relies on garbage collector technique to prevent memory leaks
 
 ====<[ js: code rules ]>=========================
@@ -88,7 +88,7 @@ Source code => [ compiler  => virtual machine (lib modules) ] => Runing Code
 #   - examples: C/C++ excutable 
 #   - machinecode is what the CPU understand and directly executes without needing
 #     further translation
-# In Short, bytecode is an intermediate step, while machine code is the finable
+# In Short, bytecode is an intermediate step, while machine code is the finale
 # executable code for the hardware
 #
 > [ JUST-IN-TIME (JIT): ] =======================
@@ -105,7 +105,7 @@ Source code => [ compiler  => virtual machine (lib modules) ] => Runing Code
   # TIP:
   # Earyly in JS history, engines were the same as interpreter but this technique is too slow
   # Modern js engines use <HYPRED MODEL>, wich means start by interpreting the code,
-  # then dynamically compile & optimize parts of is as they run,
+  # then dynamically compile & optimize parts of it as they run,
   # offering a balance of initial speed & long-term preformace
   # In pure interpretation, the code is executed instruction by instruction.
   # In an engine with JIT compilation, it interprets first but compiles and optimizes
@@ -114,7 +114,7 @@ Source code => [ compiler  => virtual machine (lib modules) ] => Runing Code
   # CONCLUSION: 
   # engines katparser source code l wahed AST,
   # lcompiler kihawlo l bytecode ohna fin katbda lkhedma 
-  # kayched awel instraction or cold code tay executiha using iterpreter (for intitial speed)
+  # kayched awel instraction or cold code tay executiha using interpreter (for intitial speed)
   # mn ba3d ila l9a hot code tay3tiha l jit-compiler lit tayconverith l native machine code
   # ty excuta direct by cpu
   # jit-compiler bypass the need bytecode interpretation (o had l operation hiya li slow)
@@ -122,10 +122,25 @@ Source code => [ compiler  => virtual machine (lib modules) ] => Runing Code
   # so it doesn’t need to compile it again if it’s executed later. 
   # NOTE: 
   # interpreter in python uses the tradionnal (bytecode) interpretation technique
-  # javascript use a modern interpreiation technique is called JIT
+  # javascript use a modern interpreiation technique is called JIT compilation
   # javascript interpreter is called Engine
   # INFO: 
   # Node js use V8 engine the one exist in google chrome for interpretation
+
+  # CONCLUSION:
+  # - js engines relies on JIT complitation but early js used bytecode interpreter
+  # - bytecode interpreter are two slow since they interprete instruction by instruction 
+  # - engines parse the source code to generate AST, then it's get converted
+  # engine compiler to bytecode (low-level representation executed by VM),
+  # engine will do initail speed (interprete immdiatilay the first instructions)
+  # until a hot code (frequrently code) is found, (the process taken by interpreter
+  # is too long), the part that compile the hot code is the JIT-COMPILER, it has 
+  # a cache that stores the native machine code (it's what the CPU understand, The
+  # final executable that runs directly on the CPU) to hot code, it will be executed
+  # immediatly when a hot code found, but if cold one is found the other process
+  # will be followed by the interpreter, it's the one responsible for executing
+  # the cold code
+  # - engines use the HYBRD model (bytecode interpreter + JIT-compiler)
 ================================================================================
 
 === Javascript in browser envirmment: ==========================================
@@ -146,9 +161,10 @@ There are Two methods to link javascript code with HTML page
   - use this method if you have a special code for specific page 
 2|_
   <script src="js_code_path"><script/> 
-  - code can be used in different places
   - readable
   - fast for browser
+  - code can be used in different places
+
 # INFO: =========================================
 - script can be written anyware you want, but there is a diff between <head>&<body>
 - put <script> in header can cause two problems 
@@ -233,7 +249,7 @@ C/C++/JS: (condition) ? expression: expression
 
 > Type operators 
   - typeof __var__                  => return variable type
-  - __var__ instance of <Datatype>  => return true/false, checks if it's instance from something  
+  - __var__ instanceof() <Datatype> => return true/false, checks if it's instance from something  
 
 ===<{ statments: }>================
 > if statment   C/C++ 
@@ -252,35 +268,57 @@ C/C++/JS: (condition) ? expression: expression
 
 > Single precesion: 1 bit (sign), 8 bits (exponent), 23 bits (mantissa)
 Formula for Single Precision:
-  (−1)sign×1.mantissa×2(exponent−127)
-
+  (−1)sign×1.mantissa(fractional part + 0 .. 0)×2(exponent + 127)
+* since exponent is stored in 8 bits = 2^8 / 2 = 256 / 2 = 128 - 1 = 127
+* we simply sheft the value of it's a negative one, to make it simpler and fater arithmetic circuits, storing exponents as unsigned integers with bias eliminated the need for additional circuitry to handle signed numbers
+ex:
+  22d = 10110b
+  - sientific notation: 1.0110 * 2^4 
+  - exponent = 4 + 127 = 131 = 10000011 
+  - mantissa = 0 0110 000 000
+  - sign = 0
+    => 0 | 10000011 | 0 0110 000 000 
+    => in mantissa always look for 1,xxx, 1 is always assumed, hadchi kay3tini bit wahed
+    zyad bach nkaber range dyali l mantissa o n9dar nkhazzen ktar 
 > Double precision: 1 bit (sign), 11 bits (exponent), 52 bits (mantissa)
 Formula for Double Precision:
   (−1)sign×1.mantissa×2(exponent−1023)
+
+Quesion: how FPU reads floating point value
+  - look for sign 
+  - get's the mantissa add 1 hidden bit + mantissa
+  - exponent - 127 
+  - apply formual (-1)^sign * mantissa * 2 * exponent
+# CONCLUSION:
+# - floating-point is nothing but storing a sientific notaion but adding some tahssinat:
+# - exponent bach manmardouch bi 2's complement o bzff lhssabat tanchifti o nkhalih simple
+# - bach nkaber range dyali tan assmui dima end 1.xxx o tanstori ghir xxx 
+# - o fi mli FPU taybda i9ra taydir l3akss dyal hadchi
 
 # INFO: 
 Floating-point (single precision) uses 32 bits and provides less precision (about 7 decimal digits), with a smaller range.
 Double precision uses 64 bits and provides more precision (about 15-17 decimal digits), with a larger range.
 - JavaScript uses double precision floating point for all its number types, allowing it to handle a wide range of values with relatively high precision. However, this can lead to rounding errors when dealing with very small or large numbers or performing certain calculations.
+
 > Solution:
-  - toFixed() => convert to fixed-point represenation 
+  - toFixed() => convert to fixed-point representation 
 
 # NOTE:
 # Js engine use memory <Stack> for primitive datatypes (numbers, Strings, booleans)
-# Js engine use memor <Heap> for reference data types (objects, arrays)
+# Js engine use memory <Heap> for reference data types (objects, arrays)
 
 # HINT: understand immutable & mutable (python/javascript)
 # immutable means it have fixed size, making them suitable for stack
 # mmutable means their size can grow dynamically and may not be know at compile time
 
 # INFO: 
-# garbege collector mekhtalf chi chwiya 3la hadak li 3rafna fi C hada tayb9a ijma3 o
+# garbage collector mekhtalf chi chwiya 3la hadak li 3rafna fi C hada tayb9a ijma3 o
 # o mli tayhess bi lmemory bdat kat3mar taydir chataba peridically (bi chakl dawri)
 
-# HINT: Garbege collector (python vs javascript)
+# HINT: Garbage collector (python vs javascript)
 # python: Reference Counting  + Cyclic Garbage Collection
 # js: Mark-and-Sweep Garbage Collection
-# Refernce counting (internal reference counting) is used also by smart pointers
+# Reference counting (internal reference counting) is used also by smart pointers
 
 > Number limits
   Integers: 999...999 | 15 number
@@ -327,4 +365,23 @@ Double precision uses 64 bits and provides more precision (about 15-17 decimal d
 - Math.PI
 ...
 
+# NOTE:> VERY IMPORTANT
+# - two's complement is the standard method used in computer systems to represent negative integers in memory. (for signed integers) 
+# In Math: Complement refers to the difference between a number and a specified base
+# ex: Complement of set A are the elements of set U that are not in A
+# ex: range[0, 9] complement of 4 is 9 - 4 = 5
+# The concept of complement is about finding what is missing or remaining within a given set or range.
+# In Computer sience: means inverting all bits 
+# 2's complement: means inverting all bits in 2 binay system + adding 1 for sign
+# convertion:
+#   - signed integer to binary
+#   * if positive it will be stored as it's but 
+# - for unsgined integers no 2's complement is used it will be stored naturly
+# - default storing in memory is unsigned by default
+# - (ALU: Arithmetic Logic Unit, CPU unit that handle signed & unsgined integers
+# , responsible to handle arithmetic operations, +, -, *, /, &&, ||, NOT)
+# - (FPU: Floating point unit, is part responsable to read floating values)
+# - bias (for shifting) is used to simplify operations, ne need for complex operations to get exponent.
+# HINT: - when number exede it's max it be overflowed, Wraparound(shifting) is how this overflow is handled, but in general in undefind behaviour in most of compilers
+# WARNING:> it's only for floating-point exponent represenation
 
