@@ -1,0 +1,80 @@
+
+====<{ js: DOM }>===============================================================
+=> DOM: document object model
+  * DOM: is an object that contains all elements objects
+  * wich means each object change, my change the page's look
+  # in js: object <document> is DOM (AST)
+
+
+<!DOCTYPE html>
+
+<header>
+  <meta charset="UTF-8">
+</header>
+
+<body>
+  <p>
+    "Hello world"
+  </p>
+</body>
+
+> [ AST: ]
+
+                document
+                   |
+                <html>      Root element / Root Node
+                  / \
+                /     \
+            <head>    <body>  Parent Node | - <head> & <body> are siblings nodes
+              |        | 
+            <meta>    <p>
+                       |
+                     "Hello World" 
+            
+
+====<{ js: select }>=============================
+> document.getElementById()
+  let element = getElementById("id");
+
+  element.innerHTML = 'My content is changed'
+
+# NOTE: In case of duplicated id, getElementById will return the first element 
+
+> document.getElementByClassName()    | return array contains all elements 
+  var elements = document.getElementsByClassName("demo");
+
+  elements[0].innerHTML = 'new content'   # change firt element
+  elements[1].innerHTML = 'new content'   # change second element
+
+> document.getElementByTage()     | return array contains all elements 
+  var elements.getElementsByTageName();
+
+  elements[0].innerHTML = 'new content'
+  ...
+
+> CSS: selector 
+
+> document.querySelector() & document.querySelectorAll()
+  var element = document.querySelector('tag.class') 
+                                        > 'p.demo'    | return paraghraph with class demo
+
+  element.innerHTML = 'change content'
+
+  var element document.querySelectorall('p.demo');    | return all 'p' with class 'demo'
+
+# NOTE: 
+- you can use for loop to loop over array
+
+  for (index = 0; index < array.length; index++) {
+    array[index].innerHTML = 'new content'
+  }
+
+====<{ js: Add }>================================
+> createElement()
+  * used to create an HTML tag
+
+> createTextNode()
+  * used to create text or content of tag
+
+> .appendChild(content)
+  * used to add HTML tag to an elemnt (html tag)
