@@ -1,3 +1,4 @@
+                    [ DOM Manipulation ]
 
 ====<{ js: DOM }>===============================================================
 => DOM: document object model
@@ -26,7 +27,7 @@
                   / \
                 /     \
             <head>    <body>  Parent Node | - <head> & <body> are siblings nodes
-              |        | 
+               |       | 
             <meta>    <p>
                        |
                      "Hello World" 
@@ -77,4 +78,117 @@
   * used to create text or content of tag
 
 > .appendChild(content)
-  * used to add HTML tag to an elemnt (html tag)
+  * used to add HTML tag to an element (html tag)
+
+> document.body.insertBefore(element, parent_element);
+  * insert element before parent_element
+
+> element.innerHTML
+  * used the convert the whole body with another html content
+
+> element.insertAdjacentHTML('where_to_add', 'content_to_add')
+  - beforebegin : add before element
+  - afterend    : add after element
+  - afterbegin  : add at first of the element content
+  - beforeend   : add at the end of the element content
+
+====<{ js: Delete }>================================
+> element.remove()
+  * element removes it self
+
+> parent.removeChild(id)
+  * parent can remove one of it's childes
+    | returns object from the removed child element 
+
+> parent.replaceChild(newChildObj, oldChildObj)
+  * replace a child by another one
+
+====<{ js: Styling}>================================
+
+> [ Edite & Remove]
+
+1|_ Syntax: Edite
+ - style.propertyName
+  ex:
+    - element.style.color = 'red';
+    - element.style.fontFamily = 'Arial';
+    - element.fontWeight = 'bold'
+
+  - This one adds properties directly in HTML
+  <element style="color=red; font-family=arial; font-weight = bold"
+
+2|_ Syntax: add & remove
+  - element.classLis.fun(css_class)
+    ex:
+    - element.classList.add();
+    - element.classList.remove();
+    - element.classList.toggle(); add css class if not used, otherwise remove it
+
+  - example of css class:
+    <style>
+      .test {
+        background: red;
+        padding: 20px;
+        ...
+      }
+    </style>
+
+# NOTE:
+  - classList.add() & classList.remove(), deals with too much classes
+    not only one.
+  - css class is used in HTML like this <element class="class_name1 'hightlight-border" ...> 
+
+* Remove
+  - element.classList.remove('class_name1 class_name2');
+
+
+  * classList.contains('class_name')    : to check if class name is contained
+  * classList.className = 'class_name'  : set css class_name or add using += 
+
+  # NOTE:
+  - use classList.add() * classList.remove() instead of className because dealing with is 
+    more eseaier & prevent from remving other element css classes by mistake
+
+  # TIP:
+    - know default styling that applies on elements ?
+     * elementStyle = window.getComputedStyle(elementObject)
+      - elementStyle.getPropertyValue('property_name');
+      property_name {
+        - color
+        - font-size
+        - background
+        - padding 
+        ...
+      }
+    - you can use for loop to loop over all properties
+
+==== get & set attribues: =======================
+
+1|_ Directly
+  > element.attr = 'value';
+
+2|_ throw get & set functions
+  > element.getAttribute('attr_name')
+  > element.setAttribute('attr_name', 'attr_value');
+  > element.removeAttribute('attr_name');
+
+# NOTE:
+  - Get & set functions are more recommended, it allows dealing with all attributes
+    ex: you can deal with some custom tags (user-defined elements/attributes)
+
+==== DOM navigation: =============================
+- DOM navigation means the ability of reaching the element directly
+- any tag in DOM is called Element or Node
+  ex:
+    - parent element or parent node
+    - child element or child node 
+    - siblings element or sibleing node
+
+# INFO:
+  - each node in dom can reach it's parent, child, sibling nodes.
+  - we can always start from one node & start navigation 
+
+  * Parent  : element.parentNode
+  * siblings: element.nextElementSibling && element.previousElementSibling
+  * child   : element.firstChildElement && element.lastChildElement && element.children
+
