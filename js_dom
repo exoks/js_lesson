@@ -65,6 +65,7 @@
 
 # NOTE: 
 - you can use for loop to loop over array
+- '#id' can even select the object
 
   for (index = 0; index < array.length; index++) {
     array[index].innerHTML = 'new content'
@@ -192,3 +193,85 @@
   * siblings: element.nextElementSibling && element.previousElementSibling
   * child   : element.firstChildElement && element.lastChildElement && element.children
 
+==== Events: =====================================
+
+> ===<[ Events: ]>===============
+- click     :   => when an element has been clicked using mouse or keyboard
+- keyup     :   => happens when key is released 
+- keydown   :   => happens when key is pressed
+- mousemove :   => happens when mouving mouse on element
+- mouseover :   => happens when mouse cursor on/'over' element
+- mouseout  :   => happens when mouse cursor is out of element
+- change    :   => happens when element value/status is changed
+- focus     :   => when element is selected
+- blur      :   => when an element is not selected 
+- submit    :   => when data is submitted to server
+- load      :   => happens when static content is loaded 
+- resize    :   => heppens when mouse is resized 
+
+# NOTE:
+  - Events start with 'on', onclick, onchange ... 
+
+# Questions:    how to make element deal with handlers ? 
+  * There are 3 ways to add handlers: 
+  - Inline Event Handler    => add it directly and it's easy opetion but is not the best
+  - Event Handler Property  => add it as a property but there is better than that
+  - Event Listener          => use listenner & this is the best option
+
+> === Inline Event Handler: =====
+  - define event property in element tag 
+  <element onevent="handler()">
+
+  <script>
+    function handler() {
+      // statement
+    }
+  </script>
+
+> === Event Handler Property: ====
+  - define selector & element.property (onevent) 
+
+  <script>
+    var element = // select element 
+
+    1|> element.onevent = function handler() {}
+    2|> element.onevent = (event) => {}
+    3|> element.onevent = handler(event); 
+  </script>
+
+> === Event Listener: ===========
+  - define event selector & element.addEventListener() 
+
+  <script>
+    var element = select element object
+
+    1|> element.addEventListener('eventType', function() {});
+    2|> element.addEventListener('eventType', () {});
+    3|> element.addEventListener('eventType', handler);
+  </script>
+
+  > removeEventListener('eventType', handler);
+
+# NOTE:
+  - element can has mutli-eventListener or even duplicated eventListener
+  > Event Properties
+    * 'click':
+      - event.type
+
+    * 'keyup': 
+      - event.key
+      - event.keyCode
+
+    * 'mousemove':
+      - event.clientX
+      - event.clientY
+
+# Qhiwa:
+  - kif matan3raf HTML files are converted to DOM 
+  - DOM is nothing but an AST tree 
+  - DOM is manipulated & used  
+  - keef ma ban liya fi android studio, xml are converted in run
+    time to java classes, but javascript in browser envirement
+    execution xml are converted it, to the whole object document.
+  - DOM is a specific appraoch to parse and represent documents (HTML/XML)
+    as an object tree in memory
