@@ -148,7 +148,7 @@
 
   # NOTE:
   - use classList.add() * classList.remove() instead of className because dealing with is 
-    more eseaier & prevent from remving other element css classes by mistake
+    more easier & prevent from remving other element css classes by mistake
 
   # TIP:
     - know default styling that applies on elements ?
