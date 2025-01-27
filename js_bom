@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/23 12:56:36 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/25 17:59:08 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/27 10:01:59 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -124,13 +124,13 @@
   - window.location.pathname  : get pathname 
   - window.location.search    : get search
     # NOTE:
-    # search: means args & values passed to server from URL it called QueryString
+    # search: means args & values passed to server from URL, it called QueryString
     # QueryString are part after ?
   - window.location.hash              : get page id
   - window.location.reload(boolean)   : reload page | boolean is optional, true means
     reload the cached page (bring a new one from the server)
     # NOTE:
-    # reload from window.location.reload() is different from refresh botton, reload()
+    # reload from window.location.reload() is different from refresh button, reload()
     # function removes all values.
 
 ====<[ window: history object ]>==================
@@ -151,7 +151,7 @@
   - window.alert('msg'), alert('msg')     : for notification
   # NOTE:
     # alert window block the event loops until the window is closed
-    # return boolean value eather true/false value
+    # return boolean value eather true/false value.
   - window.confirm('msg'), alert('msg')   : for confirmation
   - window.prompt('msg', 'default_value'), prompt()
   # NOTE:
@@ -209,7 +209,7 @@ your device if files managed by browser.
   # split that string into info by info in this form name: values
 
 ====<[ Window: local storage ]>==================
-- Local Storage: is place used by browser to store data, the data
+- Local Storage: is a place used by browser to store data, the data
 is stored in hard drive not in memory
 - data in local storage are stored the same as cookies with form
   - name: value
@@ -230,3 +230,45 @@ is stored in hard drive not in memory
     - localStorage.clear() # remove all items in local storage
     - localStorage.remove()
 
+====<[ Window: Session Storage ]>================
+- Session storage: is all about storing data in RAM 
+- Session stores it's data in form of (name/value)
+- browsers gives 5MB-10MB for each website, if the data
+is more than max, then data will be ovverrited instead 
+- tokens are stored in session stored.
+
+  > [ window: sessionStorage object ]
+    - sessionStorage.setItem('name', 'value'); # Add/Update
+    - sessionStorage.getItem('name'); # Get 
+    - sessionStorage.removeItem('name'); # remove
+    - sessionStorage.clear(); # clear all session elements
+
+# NOTE:
+# |> The diff between localStorage & sessionStorage lies on their
+# persistence & scope
+# |> localStorage: data stored in it presists even after the browser is
+# closed & reopened, it remains until it is explicitly deleted by the user
+# or through code, (data remains available across multiple tabs & windows from the same 
+# origin, ex: if data stored in one tab, it can accessed in other tabs).
+# |> sessionStorage: it is limited to the specific tab or window, Data in
+# one tab cannot be accessed by another tab or window, even if they are the same origin
+
+====< [ Window: navigator ]>=====================
+- window.navigator: contains all navigator attributes,
+ex: name, version, language, os, connected or not
+
+  > [ Window: navigator ]
+    - navigator.appVersion      # get browser version
+    - navigator.platform        # get os that is used to run on it  
+    - navigator.language        # get browser language
+    - navigator.coockieEnabled  # check if user allows cookie to be stored in it 
+    - navigator.onLine          # check if browser is connected to internet
+
+  # INFO: 
+  # There are two events happen in context of internet connection 
+  # 1 => 'online', happens when browser is connected 
+  # 2 => 'offline', happens when browser is disconnected 
+
+  # WARNING:
+  # There are too many info in class navigator but it's not supported in
+  # all browsers.

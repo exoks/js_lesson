@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Local Storage </title>
+</head>
+
+<body>
+  <h1> Local Storage </h1>
+  <!-- <input id="textInput" type="text"> -->
+  <p id="p"></p>
+  <script>
+    let p = document.getElementById('p');
+
+    let value = this.prompt("Input: ");
+    if (value != null)
+      console.log("value: " + value);
+    this.localStorage.setItem('input', value);
+    console.log("value stored: " + this.localStorage.getItem('input'));
+    this.localStorage.removeItem('input');
+  </script>
+</body>
+
+</html>
