@@ -1,0 +1,149 @@
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣦⣴⣶⣾⣿⣶⣶⣶⣶⣦⣤⣄⠀⠀⠀⠀⠀⠀⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢠⡶⠻⠛⠟⠋⠉⠀⠈⠤⠴⠶⠶⢾⣿⣿⣿⣷⣦⠄⠀⠀⠀                 𓐓  js_sync 𓐔           
+#  ⠀⠀⠀⠀⠀⢀⠔⠋⠀⠀⠤⠒⠒⢲⠀⠀⠀⢀⣠⣤⣤⣬⣽⣿⣿⣿⣷⣄⠀⠀                                              
+#  ⠀⠀⠀⣀⣎⢤⣶⣾⠅⠀⠀⢀⡤⠏⠀⠀⠀⠠⣄⣈⡙⠻⢿⣿⣿⣿⣿⣿⣦⠀  Student: oezzaou <oussama.ezzaou@gmail.com> 
+#  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
+#  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
+#  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/27 11:29:51 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/27 16:01:21 by oezzaou
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
+#  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
+#  ⠀⠀⠀⠀⠀⡄⠀⠀⠀⠘⢧⡀⠀⠀⠸⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀                     𓄂 oussama ezzaou𓆃  
+#  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
+
+====<[ Sync/Async: ]>============================
+- easy hadshi tla3 liya fi rassi bi katrat l9raya elih qbal hhh
+- async code execute it's taks one by one, but the problem here
+if one of tasks is async, our code will take too long, solution
+is to make that task run async (prevent blocking the event loop)
+- javascript meskina is single threaded execution pool (event_loop),
+we have to pay attention to not block that event_loop
+- async code solves the problem of sync code.
+
+====<[ CallBack: ]>==============================
+- call back in general is to pass an excutable to another one,
+to execute it later or call it back later.
+- callBack function is function passed as an argument
+to another function, that it will be excuted later. 
+
+# NOTE:
+- Syntax:
+  function callBack(e) {
+    // operation on e
+  };
+
+  function iter(arr, callBack) {
+    for (e in arr) {
+      callBack(e);
+    };
+  };
+
+  - iter(arr, callBack);
+  - iter(arr, function() {});
+  - iter(arr, () => {});
+
+====<[ Promiss: object ]>=========================
+- Promis is JS built-in object used to handle asynchronous operations,
+it represent a value that my be available now, in the future or never
+provides a good way to deal with async tasks compared to traditional 
+callback-based approaches.
+
+  > [ callback-based: async programming ]
+  * One way to handle async Tasks is to use <callback-based approach>
+    - Fetching data from an API || database (I/O bound task)
+    - Reading/writing files (CPU bound task)
+    - Delayed execution (CPU bound taks)
+    - User interactions (button, clicks)
+
+  # ERROR: 
+  # - the issue with callback-based approach appears in case
+  # of nested callbacks wich each task depends on the others,
+  # it can make the code hard to read & maintain (callback hell)
+  # - error handling is more harder
+  # - callback-based appraoch was the foundation of handling asynchronous tasks
+  # ,but it has been largly replaced by <promises> & async/await due to their
+  # readability, better error handling & composablitiy.
+  
+  # INFO:
+  # - This appraoch is supported in python/javascript, but it's use async/await
+  # & future for asyncronous programming
+  # - In C, asynchronous programming primarliy relies on 
+  # callback-based approaches using function pointers.
+  # - there are no built-in constructs like promises or async, so
+  # handling it envolvoes libraries like POSIX threads ||
+  # event-driven frameworks.
+  # - From C++11 supports futures, promises & async for
+  # managing asyncronous tasks.
+
+  # NOTE:
+  # - Jarebt ndir callback l function fi python/javascript o hassboha bhal asyntask
+  # why: these language has a built-in mechanism that classify these tasks as
+  # async operations (to prevent blocking the event loop)
+  # - In C la l excution ghadi it blocka, lhal howa ?
+  #   1|> Event_loop: callbacks + event_loop execution manager (pool)
+  #   2|> Threading:  callbacks + thread-base execution manager (pool) 
+
+  # TIP: callback mechanism it's simply away to define a function that gets
+  # executed some later point
+
+  # INFO:
+  # - callback-based approach <========> callback mechanims + execution pool,
+  # where tasks are passed as callback
+  # - had rwiina kamla dyal callback-based approach & other approach is to simplify 
+  # the syntax of lemrid dyal hadi ^^^^^^^, it abstract the complexity of callbacks
+  # & provide move <developer-friendly> patterns for asynchronous programming.
+  # - li kont tan3raf ana l event loop katkoun based 3la Multiplexing, yes
+  # shiha but L Multiplexing is not the only available approach, callback-based
+  # is another approach, that can be used to build an event-loop, callback mechanism
+  # is part of the event loop while is used to define what happens when those tasks
+  # complete
+
+  > [ js: Promise ]
+  * Promis is just an abstraction of callback-based approach mechanism to handle
+    async tasks
+  * li ban liya had async ghir bach n obtimize lwaqt bzzff dyal task execution
+
+    => Syntax:
+      function asyncTask() {
+        // task
+
+        return new Promis((resolve, reject) => {
+          // promise code
+
+          // value returned in case of success
+          resolve(value);
+
+          // returned value in case of failure
+          reject(error);
+        })
+      }
+
+      asyncTask().then(
+        (value) => {// what to do in case of success}
+        (error) => {// what to do in case of failure}
+          or 
+        // handle all error at once
+        catch( (erro) {
+
+        })
+      );
+
+    # NOTE:
+    # - It's easy just need some practice, it's just an absturction of 
+    # callback-based appraoch.
+
+  > [ js: await/async abstruction on the top of Promise ]
+    - let's make it more easier, await & async are just another abstruction
+      of callback-based approach & promise
+    - async is used to define the function that return Promise object
+      & await when call the function that execute promise
+      when you say await, you have to wait for the promise to return the result
+      no matter what.
+
+      async function asyncFunction() {
+        // await for the asynctask 
+      }
+
+=== Questions: ===
+- Understand Deeply callback-based ?///
