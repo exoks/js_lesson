@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Fetch </title>
+</head>
+
+<body>
+  <h1> HOME </H1>
+  <p id="p"> </p>
+  <script>
+    async function fetchData() {
+      let url = "https://jsonplaceholder.typicode.com/posts";
+      let p = document.getElementById("p");
+
+      // upon successful, server returns a copy of added data
+      let response = await fetch(url,
+        // prepare post request
+        {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+          body: JSON.stringify({
+            title: "this is the title",
+            body: "this is the content",
+            userId: 1,
+          }),
+        },
+      );
+
+      if (response.ok == false)
+        throw ("an error has occured");
+      let data = await response.json();
+      p.innerHTML = "id: " + data.id + "<br>";
+      p.innerHTML += "title: " + data.title + "<br>";
+      p.innerHTML += "body: " + data.body + "<br>";
+    }
+
+    try {
+      fetchData();
+    } catch (error) {
+      this.alert(error);
+    }
+
+  </script>
+</body>
+
+</html>

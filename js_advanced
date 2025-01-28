@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/27 16:14:28 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/27 17:29:01 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/28 15:45:44 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -58,7 +58,247 @@ send user requests & get server responses in async way without the need
 to refresh page or moving to another page.
 
 # NOTE:
-  - developers used to Work with XMLHttpRequest to comminucate with server
-    it was not easy to work with it, mostly developers used to work also with
-    JQuery to make it simple.
-  - 
+# - developers used to Work with XMLHttpRequest to comminucate with server
+#   it was not easy to work with it, most developers used to work also with
+#   JQuery to make it simple.
+# - Fetch API: abviously it's an async task (I/O bound tasks), must be use
+# Promise to handle these kind of tasks.
+
+|> Syntax:
+  - fetch(resource, options)
+    * resouce: link or path where to send request
+    * options: optional depends on request type, 
+
+  > fetch("https://www.google.com/", {
+     method: 'GET', 
+   });
+ 
+  # INFO:
+  # fetch() an async function, since JS depends on event_loop, await will force
+  # event_loop to wait for this async task to get the results, it has a different
+  # meaning in python, await tell the event_loop to skip this task until it will
+  # be ready.
+  # fetch() is an async function that allow us to communicate over network with
+  # server
+
+  - Content-type: defines the type of data requested
+    > These are the typef of static content
+    * text/plain    : you define that you want a normal string
+    * text/plain    : you define that you want and HTML string
+    * text/css      : you want a css string
+    * text/xml      : you want an xml string
+    * text/csv      : string in form of CSV
+    * text/javascript:
+    * application/json:
+    * image/png
+    * image/apng
+    * image/git
+    * image/jpeg
+    * image/svg+xml
+    * image/webp
+    * application/octet-stream: in form of binary
+    * multipart/form-data: 
+
+    |-> ex:
+    fetch("https://harmash.com/account/login", {
+    method: 'POST',
+    headers: {
+        'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+        username: 'test',
+        password: '1234',
+      }
+    })
+
+  > [ fetch(): usage ]
+    1|_ Promise
+      fetch(url);
+        .then((response) => response.txt());
+        .then(data => console.log(data));
+
+    2|_ async/await
+      async function fetchData() {
+        let url = // some values
+
+        let response = await fetch(url);
+        let data = await response.text();
+        console.log(data);
+      }
+
+      fetchData();
+
+====<[ js: Hoisting & Strcit Mode ]>===================================================
+> Hoisting:
+* simply change the scop of variable or function ^ to up (make it visible outside
+  of their scop)
+* when we define a var in js without any keyword, this varibale is a global
+  var that can be accessed from anywhere
+
+# NOTE: 
+# you can't redefine (hoisting: raf3) using let & const keywords
+# javascript engine will look for function when it's interpreted
+
+  |> Syntax:
+    x = value;
+
+    var x; // hoisting x to make it's scope only available in function 
+
+> Strict Mode:
+  - from ES5 strict mode can be enabled by typing this line, in the targeted
+  scope
+  - Strict Mode Rules:
+    * It's forbidden to define a variable without const, let, or var.
+    * forbidden to use 'delete' keyword to delete array or object
+    * Not allowd to use same name for different function parameters
+    * Do not use this for function that is not exist in class 
+    * Do not use reserved keywords as name of varibales, or even keywords
+      that is planned to be added in js.
+# TIP: keywords that expecte to be included in js in the future
+# yield - public - protected - private - package - interface - implements - arguments
+    * Do not add 0 in front of number, ex: var nbr = 010;
+    * Do not change a property value if its 'writable: false'
+
+  |> Syntax:
+  // Scope
+  {
+    'use strict'
+    // code
+  } 
+  
+# INFO: Strict mode benifites
+# 1|_ Code in javascript will have a rules
+# 2|_ taykhali l developers mayti7ch fi chi machakil dyal
+#   abstraction dyalha o hadchi s3ib elih bach ychofo
+# 3|_ ha lktaba takhli l code dyalk ikhdem m3a new versions
+
+====<[ Modules: ]>=============================================================
+- Modules allow us to split the file into different modules
+
+  > [ Create Module: Browser & Server Envirement (ES Modules, modern js) ]
+    - By default you can not get functions ..., that does not include 'export'
+      keyword
+    - use 'import' keyword in the file that want to include module
+    - in script tag,
+      <script type="module">
+        // 1|_import module
+        // 2|_ use module
+      <script>
+    - to include something only from module
+      js: import {domain, functionName .. } from 'message.js'
+      py: from module import domain, funcitonName, ...
+    - import * as moduleName from 'module.js'
+    - get Module default value
+      ex:
+        module.js
+        export const name= "oussama";
+        ...
+
+        export default name;
+
+        import x, {name, ...} from 'module.js'
+        # TIP: x will take value of name even if this module does not contain
+        # anything with 'x' name, THIS METHOD ALLOWS YOU to defin ONE variable
+        # or function with keyword 'default' 
+    - 'as' key word, us used to change module name, in case of conflict names
+      import { var/FunctionName as anotherVar/Function } from 'module.js'
+
+    # NOTE: 
+    # To use ES modules with node.js, You must change enable  ES Modules
+    # (ECMAScript Modules) by specifying "type": "module" in your package.json file.
+    # This tells Node.js to treat all .js files as ES Modules by default,
+    # instead of CommonJS. 
+
+  > [ Create Module: Node.js <server envirement> | Common Js]
+    
+    - module: module.exports = { name, ... };
+    - places: const module = require('./module');
+
+  #  INFO:[ ES Modules ] 
+  #  1|_ export ...
+  #  2|_: 
+  #  import {name, hello} from 'module.js'
+  #  import {name, hello} from 'module.js'
+  #  import * as alias from 'module.js'
+  #  import x, {name, hello} from 'module.js'
+  #  import {name as Name, hello as Hello} from 'module.js'
+
+  #  INFO:[ CommonJs ]
+  #  1_ module.exports = { x, ...};
+  #  2_ require('module');
+
+# ERROR:
+# [1]=|> Modules Are Deferred: Module scripts are automatically deferred, meaning they won't block the HTML parsing.
+# [2]=|> CORS Restrictions: If you serve files from file:// or a different domain,
+# you might encounter CORS errors. Use a local web server for testing, such as:
+#        Python: python3 -m http.server
+#        Node.js: npx http-server
+# [3]=|> Browser Compatibility: Ensure your browser supports ES6 modules.
+# All modern browsers (Chrome, Firefox, Edge, Safari) support them.
+# For older browsers, use a transpiler like Babel.
+
+
+====<[ JS: Date object ]>======================================================
+> Local Date: this the local time that appears accordding to geographic 
+  location.
+> Coordinate Universtal Time: UTC, UTC±x, x = difference in time
+> [ Create Date object: reference '1/1/1970' ]
+  - new Date()              : # Tue Jan 28 2025 13:06:33 GMT+0100 (GMT+01:00)
+
+  - new Date(milliseconds)  : # Thu Jan 01 1970 00:00:05 GMT+0000 (GMT)
+
+  - new Date(stringDate)    : # Mon Feb 03 2020 02:00:05 GMT+0100 (GMT+01:00) 
+    * 'Thu Feb 03 2020 02:00:05'
+
+  - new Date(year, month)   : # Mon Jun 01 2020 00:00:00 GMT+0100 (GMT+01:00) 
+    * 2020, 5
+
+  - new Date(year, month, day) #  Wed Jun 10 2020 00:00:00 GMT+0100 (GMT+01:00) 
+    * 2020, 5, 10
+
+  - new Date(year, month, day, [hours, minutes, seconds, ms]);
+    * 2020, 5, 10, 7, 30, 6, 200 #  Wed Jun 10 2020 07:30:06 GMT+0100 (GMT+01:00) 
+
+  > Usefull Function
+    # static method
+    - Date.now()            : return from 1/1/1970 in seconds. 
+    - Date.parse(stringDate): seconds between 1/1/1970 <==> stringDate
+    - Date.UTC(year, [month, day, hours, minutes, seconds, milliseconds]); 
+      return seconds between 1970/1/1 UTC <==> year, ... 
+    
+    # object.method()
+    - getMonth()-getUTCMonth(): return 0 => 11 number of month according to current year
+    - getFullYear()-getUTCFullYear(): return year
+    - getDay()-getUTCDay(): 0 => 6 number of day accordding to current year 
+    - getHours()-getUTCHourse(): 0 => 23 hours to date 
+    - getMinutes()-getUTCMinutes(): 0=> 59 according to current haour
+    ... 
+
+====<[ Js: regex ]>============================================================
+=> is used to look up in string in simple way without the need to use
+  complicated algorithms match strings.
+
+  * How to use them in js ?
+  > 1|_ var pattern = /pattern/modifiers
+  > 2|_ var pattern = new RegExp(pattern, modifiers);
+
+  # INFO:
+  # Modifiers => [g, i, m]
+  # g: global match
+  # i: ignore case sensitive
+  # m: deal [^, $] as the start/end of line 
+  
+  > Functions:
+    - str.replace(/pattern/modifiers, replacement)
+    - str.search(/pattern/modifiers);
+  > RegExp Object functions:
+    - RegExp.exec(str): compare regex with str, return null or array
+    - RegExp.test(str): compare & return true/false 
+    - RegExp.toString(): return regex as string with '//' 
+
+  > Rest is all about regex components
+  ...
+
+# INFO:
+# 1|> Try to work with 'strict mode'
+# 2|> use Promise to deal async programming instead of async/await 
