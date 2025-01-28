@@ -1,0 +1,274 @@
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣦⣴⣶⣾⣿⣶⣶⣶⣶⣦⣤⣄⠀⠀⠀⠀⠀⠀⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢠⡶⠻⠛⠟⠋⠉⠀⠈⠤⠴⠶⠶⢾⣿⣿⣿⣷⣦⠄⠀⠀⠀                  𓐓  js_bom 𓐔           
+#  ⠀⠀⠀⠀⠀⢀⠔⠋⠀⠀⠤⠒⠒⢲⠀⠀⠀⢀⣠⣤⣤⣬⣽⣿⣿⣿⣷⣄⠀⠀                                              
+#  ⠀⠀⠀⣀⣎⢤⣶⣾⠅⠀⠀⢀⡤⠏⠀⠀⠀⠠⣄⣈⡙⠻⢿⣿⣿⣿⣿⣿⣦⠀   Student: oezzaou <oezzaou@student.1337.ma> 
+#  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
+#  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
+#  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/23 12:56:36 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/27 10:05:19 by oezzaou
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
+#  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
+#  ⠀⠀⠀⠀⠀⡄⠀⠀⠀⠘⢧⡀⠀⠀⠸⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀                     𓄂 oussama ezzaou𓆃  
+#  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
+
+===<[ BOM: Browser Object Model ]>=============== 
+
+- BOM: 
+
+      [ Window: object]
+        /       \
+       /         \
+      /           \
+  [ DOM ]       [ BOM ]
+- document      - navigator       - frames
+- html          - screen          - history
+- ...           - location        - cookies
+                - XMLHttpRequest  - timers
+
+> document & window objects my have some attr
+  ex:
+    - document.location
+    - window.location
+
+  - since document is a part from window | we can access document throw window
+  ex:
+    - window.document
+
+====<[ window: page properties ]>================
+- Any window that is open in browser is a 'window' 
+  * browser Page
+  * internal pages using <ifram> tag
+  * PopUp windows (ex: alert window, window prompt)
+
+- window dementions are the most things needed during designing web pages  
+  > Window Properties:
+    => window.innerHeight  
+    => window.innerWidth
+
+  > NOTE:
+    - These two properties counts 'scrollbar (horizontal/vertical)'
+    - there are other properties that does not count it
+      * document.documentElement.clientHeight
+      * document.documentElement.clientWidth
+
+  > Window content demansions:
+    - simply means <body> demansions
+      * document.body.clientHeight
+      * document.body.clientWidth
+
+====<[ window: screen object ]>==================
+
+  > [ Screen: Properties]
+    - screen.height         : height of whole screen
+    - screeen.width         : width of whole screen
+
+    - screen.availHeight    : show available screen height
+    - screen.availWidth     : show availbale screen width
+      ex:
+        - taskbar takes a place from the screen
+        - availX will give use only the availble screen left
+
+    - screen.colorDepth     :  
+      * only number of bits used to represent 'color' in pixel (color channnel)
+      ex:
+      - 8, 16, 24, 32, bits
+      - 32, represent 24 for color & 8 for transperancy
+
+    - screen.pixelDepth     : 
+      * number of bits used to represent 'color information' in pixel
+        color channel + other channels (alpha channel: for transperacy)
+
+    > COMPARISON:
+      - in 32 bit pixel
+
+      11111111 11111111 11111111 11111111
+                 Red      Green    Blue
+      -------- --------------------------
+         (1)              (2)
+
+(1) => alpha channel (trancperacy channel) 
+(2) => color channel represent color depth 8^24 colors 
+
+(1) + (2) => represent all color information, this is what we calls pixel depth
+
+    - screen.orientation.type:
+      * screen orientaion: 
+        - 'landscape-primary'
+        - 'portrait-primary'
+        - 'landscape-secondary'
+        - 'portrait-secondary'
+        - 'portrait-primary'
+        - 'landscape-primary'
+        - 'portrait-secondary'
+        - 'landscape-secondary'
+
+====<[ window: location object ]>=================
+* location object allow us to reach all the location info
+
+  https:   //   harmash    /postes   ?search=javascript+location   #1
+ protocol      hostname    pathname          search               hash
+  scheme
+
+  - window.location.href      : get page URL
+  # TIP:
+  # 1|_ Change href property will move you to that page URL
+  # 2|_ window.location.assign('URL')
+  # 3|_ window.location.replace('URL')
+  # When you use replace() you can't return to the prev place
+  # otherwise you can with assign() & href
+  - window.location.protocol  : get protocol or scheme
+  - window.location.hostname  : get hostname
+  - window.location.port      : get port name
+  - window.location.host      : get hostname:port
+  - window.location.pathname  : get pathname 
+  - window.location.search    : get search
+    # NOTE:
+    # search: means args & values passed to server from URL, it called QueryString
+    # QueryString are part after ?
+  - window.location.hash              : get page id
+  - window.location.reload(boolean)   : reload page | boolean is optional, true means
+    reload the cached page (bring a new one from the server)
+    # NOTE:
+    # reload from window.location.reload() is different from refresh button, reload()
+    # function removes all values.
+
+====<[ window: history object ]>==================
+- when you open a new tab, a new history (something similar to backstack in android studio) 
+- history object contains a set function to move between history pages. 
+
+  - history.back()              : return to prev page
+  - history.forward()           : go to next page
+  - history.go(relative_pg_nbr) : move to page based on it's relative number 
+    * (relative_page_nbr E Z) 
+    * go(0): reload the page 
+
+  - history.length              : return the number of pages 
+
+====<[ window: dialog Boxes ]>===================
+- dialog boxes are builtins javascript windows
+
+  - window.alert('msg'), alert('msg')     : for notification
+  # NOTE:
+    # alert window block the event loops until the window is closed
+    # return boolean value eather true/false value.
+  - window.confirm('msg'), alert('msg')   : for confirmation
+  - window.prompt('msg', 'default_value'), prompt()
+  # NOTE:
+    # return the value that has been given & confirmed,
+    # otherwise null is returned 
+
+====<[ window: timer]>===========================
+- it's just a function get executed after a period
+  of time
+- it can be used to make some animation ...
+
+  - window.setTimeout('function', 'timeout_ms'), setTimeout()
+
+  - window.setInterval('function', 'time_periode'), setInterval
+
+  - window.clearTimeout('value_returned_by_setTime()')
+  - window.clearInterval('value_returned_by_setTime()')
+
+====<[ window: cookies ]>========================
+- cookies are just a data stored in the browser that
+is included with each http request.
+- browser is just a program, it stores the data in 
+your device if files managed by browser. 
+- coockie are stored in from of (Name/Values)
+
+# NOTE:
+# Most of browser reserve 4KB as limit for cookie, ila kant ktra
+# mn haka katwali terssal chwiya bi chwiya
+
+  > [ cookies: info]
+    - Domain: website name
+    - Location: pages path
+    - Expires/Max-age: expring date of cookie
+    - Size: size of cookie by byte
+    - Secure: if true it will be send only with https otherwise http/https
+    - HttpOnly: true, means it can't be reached from js
+    - SameSite ...
+
+
+  > QUESTIONS: how to access cookies from browser ?
+    - F12 ==> Application ==> Storage ==> Cookies 
+
+  > document.cookie object : is the one responsible to manage cookies
+  
+  document.cookie = 'username=oussama;
+                    max-age=' + 2592000; # experation 30 days
+                      or # this way 
+                    expires=Thu, 31 Dec 2030 23:59:59 UTC';
+                    Domain=harmash.com; Path=/; # location
+                    Secure=true # secure true only with https 
+  # NOTE:
+  # You can delete the cookie by changing it's max-age to 0
+  # max-age=0; or set an expired that instead
+  # cookie is based string, so to read it all you need to do is to
+  # split that string into info by info in this form name: values
+
+====<[ Window: local storage ]>==================
+- Local Storage: is a place used by browser to store data, the data
+is stored in hard drive not in memory
+- data in local storage are stored the same as cookies with form
+  - name: value
+- Most browsers gives the size of 5MB-10MB limit for each website 
+# INFO:
+# Local storage are used to:
+# 1|_ store the mode (night/dark)
+# 2|_ general info about user (name, language, personal picture ...)
+# 3|_ tokens
+
+  > Local Storage object
+    * local storage is part of BOM that exist in window object
+    - window.localStorage.setItem('name', 'value'); # add element
+    - window.localStorage.getItem('name'); # get item by it's name 
+      it will return <null> if the element is not exist
+    - localStorage.setItem('name'); # update item value
+    - localStorage.removeItem('name') # remove item from localstorage
+    - localStorage.clear() # remove all items in local storage
+    - localStorage.remove()
+
+====<[ Window: Session Storage ]>================
+- Session storage: is all about storing data in RAM 
+- Session stores it's data in form of (name/value)
+- browsers gives 5MB-10MB for each website, if the data
+is more than max, then data will be ovverrited instead 
+- tokens are stored in session stored.
+
+  > [ window: sessionStorage object ]
+    - sessionStorage.setItem('name', 'value'); # Add/Update
+    - sessionStorage.getItem('name'); # Get 
+    - sessionStorage.removeItem('name'); # remove
+    - sessionStorage.clear(); # clear all session elements
+
+# NOTE:
+# |> The diff between localStorage & sessionStorage lies on their
+# persistence & scope
+# |> localStorage: data stored in it presists even after the browser is
+# closed & reopened, it remains until it is explicitly deleted by the user
+# or through code, (data remains available across multiple tabs & windows from the same 
+# origin, ex: if data stored in one tab, it can accessed in other tabs).
+# |> sessionStorage: it is limited to the specific tab or window, Data in
+# one tab cannot be accessed by another tab or window, even if they are the same origin
+
+====< [ Window: navigator ]>=====================
+- window.navigator: contains all navigator attributes,
+ex: name, version, language, os, connected or not
+
+  > [ Window: navigator ]
+    - navigator.appVersion      # get browser version
+    - navigator.platform        # get os that is used to run on it  
+    - navigator.language        # get browser language
+    - navigator.coockieEnabled  # check if user allows cookie to be stored in it 
+    - navigator.onLine          # check if browser is connected to internet
+
+  # INFO: 
+  # There are two events happen in context of internet connection 
+  # 1 => 'online', happens when browser is connected 
+  # 2 => 'offline', happens when browser is disconnected 
+
+  # WARNING:
+  # There are too many info in class navigator but it's not supported in
+  # all browsers.

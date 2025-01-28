@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title> page </title>
+  <style>
+    .strok {
+      font-size: 40px;
+      padding: 50px;
+    }
+
+    .back {
+      background: lightpink;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="para" class="strok back">
+    Hello world
+  </p>
+  <script>
+    let para = document.getElementById('para');
+
+    para.classList.remove('back');
+    para.classList.add('back');
+
+    console.log(para.classList.contains('back'));
+  </script>
+</body>
+
+</html>

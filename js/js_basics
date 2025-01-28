@@ -1,0 +1,560 @@
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣦⣴⣶⣾⣿⣶⣶⣶⣶⣦⣤⣄⠀⠀⠀⠀⠀⠀⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢠⡶⠻⠛⠟⠋⠉⠀⠈⠤⠴⠶⠶⢾⣿⣿⣿⣷⣦⠄⠀⠀⠀               𓐓  js_basics 𓐔           
+#  ⠀⠀⠀⠀⠀⢀⠔⠋⠀⠀⠤⠒⠒⢲⠀⠀⠀⢀⣠⣤⣤⣬⣽⣿⣿⣿⣷⣄⠀⠀                                              
+#  ⠀⠀⠀⣀⣎⢤⣶⣾⠅⠀⠀⢀⡤⠏⠀⠀⠀⠠⣄⣈⡙⠻⢿⣿⣿⣿⣿⣿⣦⠀   Student: oezzaou <oezzaou@student.1337.ma> 
+#  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
+#  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
+#  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/19 08:16:53 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/22 10:44:01 by oezzaou
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
+#  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
+#  ⠀⠀⠀⠀⠀⡄⠀⠀⠀⠘⢧⡀⠀⠀⠸⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀                     𓄂 oussama ezzaou𓆃  
+#  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
+
+====<{ js: basics }>===========================================================
+> Javascript has been mainly designed for WEB PAGES, Make web pages dynamic
+& interactive (example: button click, add-delete-edit page component)
+> Javascript has been released since 1997
+  - javascript versions:
+  * ECMAScript1, 2, 3, 4, 5, 5.1, 6, 2016, 2017, 2018, 2019, ..., 2023
+  - Javacript is considered an interpreter language, but it's engine (interpreter)
+  use JIT technique to improve performance
+  - Javascript engine relies on garbage collector technique to prevent memory leaks
+
+====<[ js: code rules ]>=========================
+- Js is a <case sensitive>
+- Js is <camel case>, means the first char must be lowercase & then uppercase
+ex:
+  - first 
+  - firstName 
+- ';' is optional in javascript, but it's recommended
+- commants in js are the same as C/C++, Java
+- variables names can start with (_, $, lowercase, uppercase)
+
+====<[ js: how js works ? ]>=====================
+> Js runs in two primary environments:
+  - Browser Environment: Js is executed in the browser's javascript engine
+    (V8 for chrome, SpiderMonky for Firefox)
+  - Server Environment: javascript runs on servers using envs like Node.js
+
+> Core Components
+  1|_ Javascripts Engine
+    * The engine compiles & executes Javascript code
+    - V8 (used in chrome & node.js)
+    - SpiderMonkey (used in Firefox)
+    - JavaScriptCore (used in Safari)
+  2|_ Steps in the Javascript engine
+    1_ Parsing: The engine parses JavaScript code into AST
+    2_ Compilation: Modern engines use JUST-IN-TIME(JIT) compilation to convert
+      the AST into machine code
+    3_ Execution: The compiled code is executed to perform tasks 
+
+> Asynchronous Handling
+  * Js is a single-threaded but can handle async operations using event-loop
+  (execution pool)
+    - callback functions
+    - promises
+    - async/await
+
+===<{ Type of Compilations: }>==================================================
+> [ ahead-of-time (AOT): ] ======================
+  entire program compiled into machine code before execution
+    ex: C/C++, RUST (compiled languages)
+source code => preprocessor => compiler => assembler => linker => machine code (excutable) 
+
+> [ Interpretation: ] ===========================
+                            INTERPRETER (CPYTHON)
+Source code => [ compiler  => virtual machine (lib modules) ] => Runing Code 
+
+  * Parser of Compiler converts the source code into AST 
+  * Compiler converts the AST into bytecode
+  * PVM, reads the bytecode & interpretes instruction by instruction into machine code
+
+# INFO: [ KNOW I UNDERSTAND PYTHON INTERPRETER ] 
+# Compilation <From source code to bytecode>
+  # Pyhton interpreter converts the entire script into bytecode.pyc(lower-level representation)
+# Excution <by PVM>  (python interprers: CPython, PyPy, MicroPython) 
+  # PVM takes the byte code & interpretes it INSTRUCTION BY INSTRUCTION
+  # Each bytecode instruction is executed by dynamically converting it into machine code
+# This technique is called traditinal interpretation or byte interpretation 
+
+# NOTE::> what is the diff between bytecode & machine code
+# bytecode: A low-level platform-independent code
+#   - runs on virtual machine (pyhton virtual machine, JVM)
+#   - examples: python compiles .py files to .pyc bytcode
+# machinecode: A binary, platfrom-specific code
+#   - runs directly on the CPU
+#   - examples: C/C++ excutable 
+#   - machinecode is what the CPU understand and directly executes without needing
+#     further translation
+# In Short, bytecode is an intermediate step, while machine code is the finale
+# executable code for the hardware
+#
+> [ JUST-IN-TIME (JIT): ] =======================
+                            Engine
+  source code => [ compiler => interpreter => jit-compiler (detect hot code) ] => Runing code 
+  * is a technique used by modern programming
+    language interpreters & runtimes to improve performance by dynamically
+    translating code into machine language (native code) during execution. 
+  * engine JIT compiler is a little bit different from interprter compiler
+    - it does parse the source code into AST
+    - converts AST to (jit-compiled) bytecode  
+    - jit-compiled code is executed by JVM javascript virtualmachine
+    - engine during it's execution learns, and that help it optimize & fast execution
+  # TIP:
+  # Earyly in JS history, engines were the same as interpreter but this technique is too slow
+  # Modern js engines use <HYPRED MODEL>, wich means start by interpreting the code,
+  # then dynamically compile & optimize parts of it as they run,
+  # offering a balance of initial speed & long-term preformace
+  # In pure interpretation, the code is executed instruction by instruction.
+  # In an engine with JIT compilation, it interprets first but compiles and optimizes
+  # only the frequently executed parts into machine code for faster execution,
+  # bypassing interpretation for those parts.
+  # CONCLUSION: 
+  # engines katparser source code l wahed AST,
+  # lcompiler kihawlo l bytecode ohna fin katbda lkhedma 
+  # kayched awel instraction or cold code tay executiha using interpreter (for intitial speed)
+  # mn ba3d ila l9a hot code tay3tiha l jit-compiler lit tayconverith l native machine code
+  # ty excuta direct by cpu
+  # jit-compiler bypass the need bytecode interpretation (o had l operation hiya li slow)
+  # The engine can keep a cache of compiled native machine code for hot code,
+  # so it doesn’t need to compile it again if it’s executed later. 
+  # NOTE: 
+  # interpreter in python uses the tradionnal (bytecode) interpretation technique
+  # javascript use a modern interpreiation technique is called JIT compilation
+  # javascript interpreter is called Engine
+  # INFO: 
+  # Node js use V8 engine the one exist in google chrome for interpretation
+
+  # CONCLUSION:
+  # - js engines relies on JIT complitation but early js used bytecode interpreter
+  # - bytecode interpreter are two slow since they interprete instruction by instruction 
+  # - engines parse the source code to generate AST, then it's get converted
+  # engine compiler to bytecode (low-level representation executed by VM),
+  # engine will do initail speed (interprete immdiatilay the first instructions)
+  # until a hot code (frequrently code) is found, (the process taken by interpreter
+  # is too long), the part that compile the hot code is the JIT-COMPILER, it has 
+  # a cache that stores the native machine code (it's what the CPU understand, The
+  # final executable that runs directly on the CPU) to hot code, it will be executed
+  # immediatly when a hot code found, but if cold one is found the other process
+  # will be followed by the interpreter, it's the one responsible for executing
+  # the cold code
+  # - engines use the HYBRD model (bytecode interpreter + JIT-compiler)
+================================================================================
+
+=== Javascript in browser envirmment: ==========================================
+- as we all know the javascript works or get executed in two main envirements
+- server envirment: using node.js to execute it 
+- browser envirment: in google chrome, firefox or safari ...
+
+how to use javascript in browser envirmment ?
+- you can use the interactive console of the browser to execute the js code
+- to make HTML page more dynamic & interactive you could link it with js code 
+
+There are Two methods to link javascript code with HTML page
+# INFO: <script></script> Tag ===================
+1|_
+  <script>
+    // your javascript code
+  </script>
+  - use this method if you have a special code for specific page 
+2|_
+  <script src="js_code_path"><script/> 
+  - readable
+  - fast for browser
+  - code can be used in different places
+
+# INFO: =========================================
+- script can be written anyware you want, but there is a diff between <head>&<body>
+- put <script> in header can cause two problems 
+  1|-> if the script is large it will take too much time until it get's rendred
+  2|-> looking for element in header by its id while it is part of body,
+    browser won't be able to find it 
+- The best place where you can put <script> in the end of <BODY> || <HTML> 
+
+===={ js: Variables }===========================================================
+
+# NOTE::> GLOBAL 
+name = "oussama";
+
+# NOTE::> 'var' keyword | GLOBAL 
+var name = "oussama";
+
+- var: keyword does not assign a default value for the var (garbage value)
+- var is supported on all browser versions, use it if you want to support older V  
+
+# NOTE:> 'let' keyword | >= ES6 
+let name = "oussama"
+
+=> Syntax:
+  * keyword name = "oussama", age = 20; 
+
+  * keyword name = "oussama",
+            isWorking = true,
+            age = 20;
+
+  * keyword name;
+    keyword isWorking;
+    keyword age; 
+
+    name = "oussama";
+    isWorking = true;
+    age = 20;
+
+# NOTE:> 'const' keyword | >= ES6
+const name = "oussama" 
+
+- const value can't be changed later
+
+# INFO:======================================================================== 
+# using variable in javascript without assigning won't print a garbage value
+# it will print 'undefined' 
+# =============================================================================
+
+===<{ js: Datatypes }>=========================================================
+- Primitve Datatypes: Strings, Numbers (int, float, ...), Booleans
+- Reference DataTypes: Objects, Functions, arrays 
+- Special Datatypes: null, undefined 
+
+> [ Numbers: ]
+  * in javascript we have 3 types of numbers: 
+    - Integer Numbers: 8 
+    - Dicimal Numbers: 8.5
+    - Exponential Nation (scientific notation): 20e5 or 20e-5 
+
+# NOTE:  undefined & null
+# undefined: variables does not have a default value (garbage value)
+# null: variables has the value 0 or null in it's memory buffer
+# HINT: operator typeof __var__ will give you the variables's datatype 
+# WARNING: assigning undefined to a variable it will remove it from memory
+
+===<{ js: operators }>============
+> Arithmetic Operators (C/C++) 
+  a ** b : a^b 
+
+> Comparison Operators
+  - === : equal value && equale type to 
+  - !== : not equal value || not equal type 
+
+# NOTE: ternay statment
+Python: expression if condition else expression
+C/C++/JS: (condition) ? expression: expression 
+
+> Logical operators
+
+> Bitwise operators
+
+> assignment operators
+
+> Type operators 
+  - typeof __var__                  => return variable type
+  - __var__ instanceof() <Datatype> => return true/false, checks if it's instance from something  
+
+===<{ statments: }>================
+> if statment   C/C++ 
+> switch case   C/C++
+
+===<{ Loops: }>====================
+> for (variable in object) {}   => loops over all attribues of object Or element of array 
+> for (variable of iterable) {} => loops over all iterable objects (String)
+
+===<{ js: Numbers }>============================================================
+> in javascript whatever the type of number it will be stored in 64bit (8 Byte)
+> js engine stores the number according to conecpt <Double Precision Floating Point>
+> this concept is very simple we all know the concept of floating-point
+  (single precision floating point) that is stored in 32 bit (less precision),
+  but the double precision is stored in 62bit, as defined by the IEEE 754 standard.
+
+> Single precesion: 1 bit (sign), 8 bits (exponent), 23 bits (mantissa)
+Formula for Single Precision:
+  (−1)sign×1.mantissa(fractional part + 0 .. 0)×2(exponent + 127)
+* since exponent is stored in 8 bits = 2^8 / 2 = 256 / 2 = 128 - 1 = 127
+* we simply sheft the value of it's a negative one, to make it simpler and fater arithmetic circuits, storing exponents as unsigned integers with bias eliminated the need for additional circuitry to handle signed numbers
+ex:
+  22d = 10110b
+  - sientific notation: 1.0110 * 2^4 
+  - exponent = 4 + 127 = 131 = 10000011 
+  - mantissa = 0 0110 000 000
+  - sign = 0
+    => 0 | 10000011 | 0 0110 000 000 
+    => in mantissa always look for 1,xxx, 1 is always assumed, hadchi kay3tini bit wahed
+    zyad bach nkaber range dyali l mantissa o n9dar nkhazzen ktar 
+> Double precision: 1 bit (sign), 11 bits (exponent), 52 bits (mantissa)
+Formula for Double Precision:
+  (−1)sign×1.mantissa×2(exponent−1023)
+
+Quesion: how FPU reads floating point value
+  - look for sign 
+  - get's the mantissa add 1 hidden bit + mantissa
+  - exponent - 127 
+  - apply formual (-1)^sign * mantissa * 2 * exponent
+# CONCLUSION:
+# - floating-point is nothing but storing a sientific notaion but adding some tahssinat:
+# - exponent bach manmardouch bi 2's complement o bzff lhssabat tanchifti o nkhalih simple
+# - bach nkaber range dyali tan assmui dima end 1.xxx o tanstori ghir xxx 
+# - o fi mli FPU taybda i9ra taydir l3akss dyal hadchi
+
+# INFO: 
+Floating-point (single precision) uses 32 bits and provides less precision (about 7 decimal digits), with a smaller range.
+Double precision uses 64 bits and provides more precision (about 15-17 decimal digits), with a larger range.
+- JavaScript uses double precision floating point for all its number types, allowing it to handle a wide range of values with relatively high precision. However, this can lead to rounding errors when dealing with very small or large numbers or performing certain calculations.
+> how problem occures ?
+  - fractional numbers that are not multiplied by 2 gives a long represenation or infinite
+    representaion, when put in it in mantissa it will be truncated, the precision will not
+    be exact, so when making some operations it lead to unlogical values.
+  ex:
+    0.1 ± 0.00011001100110011001100110011001100110011001100110011 ...
+    - it wil be truncated once it will be stored in mantissa
+
+> Solution:
+  - toFixed() => convert to fixed-point representation 
+
+# NOTE:
+# Js engine use memory <Stack> for primitive datatypes (numbers, Strings, booleans)
+# Js engine use memory <Heap> for reference data types (objects, arrays)
+
+# HINT: understand immutable & mutable (python/javascript)
+# immutable means it have fixed size, making them suitable for stack
+# mmutable means their size can grow dynamically and may not be know at compile time
+
+# INFO: 
+# garbage collector mekhtalf chi chwiya 3la hadak li 3rafna fi C hada tayb9a ijma3 o
+# o mli tayhess bi lmemory bdat kat3mar taydir chataba peridically (bi chakl dawri)
+
+# HINT: Garbage collector (python vs javascript)
+# python: Reference Counting  + Cyclic Garbage Collection
+# js: Mark-and-Sweep Garbage Collection
+# Reference counting (internal reference counting) is used also by smart pointers
+
+> Number limits
+  Integers: 999...999 | 15 number
+
+# INFO:
+# '20' + 20             => 2020
+# 20 + 20 + '20'        => 4020
+# '20' + 20 + 20        => 202020 : '20' + (20 + 20) => 2040
+
+# INFO:
+# '10' + '5' = 105
+# '10' - '5' = 5
+# '10' * '5' = 50
+# '10' / '5' = 2
+
+# TIP:
+- if the operations is not logical it will give the value NaN (Not a Number)
+- it can be stored in var (typeof it will result NaN)
+- use isNan() function to check if the value is NaN or not
+- Infinity: when the number is too large, it will give infinity ex: 1e1000000
+
+- Some useful functions
+- toString()                : number to String
+- Number(class).isFinite()  : check infinity
+- Number.isInteger()        : if integer
+- Number.isNan()            : check if NaN
+- Number.parseInt(str)      : parse str to int
+- Number.parseFloat()       : parse str to float 
+- Math.random() * nbr       : generate random numbers  in range [0, nbr[
+- Math.floor
+
+> Constans (Limits)
+- Number.MAX_SAFE_INTEGER
+- Number.MIN_SAFE_INTEGER
+- Numbers.MAX_VALUE 
+- Numbers.MIN_VALUE
+- Number.POSITIVE_INFINITY
+- NUMBER.NEGATIVE_INFINITY
+
+> Math class
+- Math.abs()
+...
+> constants
+- Math.PI
+...
+
+# NOTE:> VERY IMPORTANT ==================================================================
+# - two's complement is the standard method used in computer systems to represent negative integers in memory. (for signed integers) 
+# In Math: Complement refers to the difference between a number and a specified base
+# ex: Complement of set A are the elements of set U that are not in A
+# ex: range[0, 9] complement of 4 is 9 - 4 = 5
+# The concept of complement is about finding what is missing or remaining within a given set or range.
+# In Computer sience: means inverting all bits 
+# 2's complement: means inverting all bits in 2 binay system + adding 1 for sign
+# convertion:
+#   - signed integer to binary
+#   * if positive it will be stored as it's but 
+# - for unsgined integers no 2's complement is used it will be stored naturly
+# - default storing in memory is unsigned by default
+# - (ALU: Arithmetic Logic Unit, CPU unit that handle signed & unsgined integers
+# , responsible to handle arithmetic operations, +, -, *, /, &&, ||, NOT)
+# - (FPU: Floating point unit, is part responsable to read floating values)
+# - bias (for shifting) is used to simplify operations, ne need for complex operations to get exponent.
+# HINT: - when number execeede it's max it be overflowed, Wraparound(shifting) is how this overflow is handled, but in general in undefind behaviour in most of compilers
+# WARNING:> it's only for floating-point exponent represenation
+# ========================================================================================
+
+===<[ js: Strings ]>============================================================
+- We can join to strings using '+' operator or <String Template>
+  ex: 
+  - 'hello, ${name}, form ${school}'
+  - samething close to bash approach 
+  - String is immutable, so it's stored in the heap, change its value will create a new one
+
+> Some Useful functions
+- charAt(index)
+- charCodeAt(index)
+- indexOf(str, indexStart)
+- search(regex)
+- includes(str)               : is exist in the main str, return boolean
+
+- substring(start, end)
+- slice(start, end)
+- split(separator, limit)
+
+- replace(regex, replacement)
+
+- startsWith(prefix)        : return boolean
+- endsWith(suffix)          : return boolean
+- match(regex)              : return boolean
+
+- toLowerCase()             
+- toUpperCase()
+- trim()                    : removes spaces
+- trimStart()               : removes from begening
+- trimEnd()                 : removes from end
+- padStart(length, char)    : add padding with char at first
+- padEnd(length, char)      : add padding with char in the end
+
+===<[ js: Arrays ]>============================================================
+
+> [ Syntax: ]
+  1_ let array = [e1, e2, ..., eN]
+  2_ let array = [
+    e1,
+    e2,
+    ...,
+    eN
+  ];
+  3_ let array = Array(e1, e2, ..., eN)
+
+> Loop over array
+  => for (index = 0; index < arr.length; index++) {
+    // arr[index];
+  }
+
+  => for (index in arr) {
+    // arr[index]
+  }
+
+  => for (elem of arr) {
+    // elem
+  }
+
+# NOTE:
+# _ arr.length similar to Java
+# _ for in does not garantie the index order (not recommended if order matters)
+
+> Useful Functions:
+  - toString()      : return "e1, e2, ..., eN" 
+  - join(seprator) : return "e1'sep' e2'sep' ...'sep' eN" 
+  - pop()           : return the last & remove it 
+  - push()          : add in the last
+  - shitf()         : return the first & remove it
+  - slice(s, e)     : slice from start to end
+  - includes(value) : look for a value in array 
+  - indexof(ele)    : look for the first occurence of elem & return its index
+  - lastIndexOf(ele): look for the last occurenceo of elem & return its index
+  - sort()
+  - toSorted        : return copy of sorted array
+  - reverse()
+  - toReversed()    : return copy of reversed array
+  - keys()          : return iterator indexes
+  - values()        : return iterator values
+  - forEach(callbak): loop over elements without the need of loop
+
+
+===[ js: Functions ]>==========================================================
+> Syntax:
+  function name(args="default value") {
+    // statements
+    // return
+  }
+
+  - Variable-length Arguments (variadic functions in C/C++)
+  function name(..args) {
+    // statements
+    // for (let e of args) {
+    // statement
+    // }
+  }  
+# NOTE:> ...: is called Rest Parameter
+  - Anonymous Function
+    let functionName = function(args) {
+      // statement
+    }
+    - this expression is called <Expression Function>
+
+# TIP:========================================================================= 
+# - when we call a function before it's prototype, engine will define it
+# but when we call define it with Variable Expression it throw an error 
+# - _varName, can be used in case of conflict names (unkown between devalopers)
+# =============================================================================
+
+  - Arrow Function 
+    varFunction = (args) => {
+      // statement
+    }
+
+    - varFunction = () => // statement            : isOneStatemnt  == true
+    - varFunction = arg => // statement           : isOneArgOnly   == true
+    - varFunction = () => // variable             : it will be return without
+                                                                return keyword
+    - varFunction = (arg="default value") => {
+      // statement
+    }
+    - varFuction = (...arg) {
+      // statement 
+    }
+
+===<[ js: objects ]>============================================================
+  > Syntax:
+   objectName = {
+    property1: value1,
+    property2: function(args) {
+      // statement
+    },
+    property3: {
+      _property1: value1,
+      _property2: function() {
+        this.preperty1
+      }
+      ...
+    }
+    ...
+   }; 
+
+  - objectName.property
+  - objectName['property']
+
+  # NOTE: 
+  # - 'this' is in javascript is related to an Object called <Window>(each web page has a window)
+  # - calling 'this' only wil print a window object
+
+====<[ js: Errors Handling ]>===================================================
+> Types of errors
+
+  - Syntax Errors
+  - RunTime Errors (exceptions)
+  - Logical Errors
+
+  Syntax:
+    try {
+      // instructions 
+    } catch(error) {
+      // error handling code
+    } finally {
+      // code that will be executed no matter what
+    }
+
+# NOTE:
+# error: is an object that stores error data (error.name, error.message)

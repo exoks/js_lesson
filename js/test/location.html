@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Location </title>
+</head>
+
+<body>
+  <h1> Location object </h1>
+  <p id="p"> </p>
+  <script>
+    let p = document.getElementById("p");
+
+    // window.location.assign("https://www.google.com/");
+    p.innerHTML = "protocol: " + this.location.protocol + "<br>";
+    p.innerHTML += "hostName: " + window.location.hostName + "<br>";
+    p.innerHTML += "port: " + this.location.port + "<br>";
+    p.innerHTML += "host: " + window.location.host + "<br>";
+    p.innerHTML += "reload: " + "<br>";
+
+    this.location.reload();
+  
+  </script>
+</body>
+
+</html>

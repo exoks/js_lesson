@@ -1,0 +1,291 @@
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣦⣴⣶⣾⣿⣶⣶⣶⣶⣦⣤⣄⠀⠀⠀⠀⠀⠀⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢠⡶⠻⠛⠟⠋⠉⠀⠈⠤⠴⠶⠶⢾⣿⣿⣿⣷⣦⠄⠀⠀⠀                  𓐓  js_dom 𓐔           
+#  ⠀⠀⠀⠀⠀⢀⠔⠋⠀⠀⠤⠒⠒⢲⠀⠀⠀⢀⣠⣤⣤⣬⣽⣿⣿⣿⣷⣄⠀⠀                                              
+#  ⠀⠀⠀⣀⣎⢤⣶⣾⠅⠀⠀⢀⡤⠏⠀⠀⠀⠠⣄⣈⡙⠻⢿⣿⣿⣿⣿⣿⣦⠀  Student: oezzaou <oussama.ezzaou@gmail.com> 
+#  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
+#  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
+#  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/27 10:05:14 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/27 19:04:27 by oezzaou
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
+#  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
+#  ⠀⠀⠀⠀⠀⡄⠀⠀⠀⠘⢧⡀⠀⠀⠸⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀                     𓄂 oussama ezzaou𓆃  
+#  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
+
+                    [ DOM Manipulation ]
+
+====<{ js: DOM }>===============================================================
+=> DOM: document object model
+  * DOM: is an object that contains all elements objects
+  * wich means each object change, my change the page's look
+  # in js: object <document> is DOM (AST)
+
+
+<!DOCTYPE html>
+
+<header>
+  <meta charset="UTF-8">
+</header>
+
+<body>
+  <p>
+    "Hello world"
+  </p>
+</body>
+
+> [ AST: ]
+
+                document
+                   |
+                <html>      Root element / Root Node
+                  / \
+                /     \
+            <head>    <body>  Parent Node | - <head> & <body> are siblings nodes
+               |       | 
+            <meta>    <p>
+                       |
+                     "Hello World" 
+            
+
+====<{ js: select }>=============================
+> document.getElementById()
+  let element = getElementById("id");
+
+  element.innerHTML = 'My content is changed'
+
+# NOTE: In case of duplicated id, getElementById will return the first element 
+
+> document.getElementByClassName()    | return array contains all elements 
+  var elements = document.getElementsByClassName("demo");
+
+  elements[0].innerHTML = 'new content'   # change firt element
+  elements[1].innerHTML = 'new content'   # change second element
+
+> document.getElementByTage()     | return array contains all elements 
+  var elements.getElementsByTageName();
+
+  elements[0].innerHTML = 'new content'
+  ...
+
+> CSS: selector 
+
+> document.querySelector() & document.querySelectorAll()
+  var element = document.querySelector('tag.class') 
+                                        > 'p.demo'    | return paraghraph with class demo
+
+  element.innerHTML = 'change content'
+
+  var element document.querySelectorall('p.demo');    | return all 'p' with class 'demo'
+
+# NOTE: 
+- you can use for loop to loop over array
+- '#id' can even select the object
+
+  for (index = 0; index < array.length; index++) {
+    array[index].innerHTML = 'new content'
+  }
+
+====<{ js: Add }>================================
+> createElement()
+  * used to create an HTML tag
+
+> createTextNode()
+  * used to create text or content of tag
+
+> .appendChild(content)
+  * used to add HTML tag to an element (html tag)
+
+> document.body.insertBefore(element, parent_element);
+  * insert element before parent_element
+
+> element.innerHTML
+  * used the convert the whole body with another html content
+
+> element.insertAdjacentHTML('where_to_add', 'content_to_add')
+  - beforebegin : add before element
+  - afterend    : add after element
+  - afterbegin  : add at first of the element content
+  - beforeend   : add at the end of the element content
+
+====<{ js: Delete }>================================
+> element.remove()
+  * element removes it self
+
+> parent.removeChild(id)
+  * parent can remove one of it's childes
+    | returns object from the removed child element 
+
+> parent.replaceChild(newChildObj, oldChildObj)
+  * replace a child by another one
+
+====<{ js: Styling}>================================
+
+> [ Edite & Remove]
+
+1|_ Syntax: Edite
+ - style.propertyName
+  ex:
+    - element.style.color = 'red';
+    - element.style.fontFamily = 'Arial';
+    - element.fontWeight = 'bold'
+
+  - This one adds properties directly in HTML
+  <element style="color=red; font-family=arial; font-weight = bold"
+
+2|_ Syntax: add & remove
+  - element.classLis.fun(css_class)
+    ex:
+    - element.classList.add();
+    - element.classList.remove();
+    - element.classList.toggle(); add css class if not used, otherwise remove it
+
+  - example of css class:
+    <style>
+      .test {
+        background: red;
+        padding: 20px;
+        ...
+      }
+    </style>
+
+# NOTE:
+  - classList.add() & classList.remove(), deals with too much classes
+    not only one.
+  - css class is used in HTML like this <element class="class_name1 'hightlight-border" ...> 
+
+* Remove
+  - element.classList.remove('class_name1 class_name2');
+
+
+  * classList.contains('class_name')    : to check if class name is contained
+  * classList.className = 'class_name'  : set css class_name or add using += 
+
+  # NOTE:
+  - use classList.add() * classList.remove() instead of className because dealing with is 
+    more easier & prevent from remving other element css classes by mistake
+
+  # TIP:
+    - know default styling that applies on elements ?
+     * elementStyle = window.getComputedStyle(elementObject)
+      - elementStyle.getPropertyValue('property_name');
+      property_name {
+        - color
+        - font-size
+        - background
+        - padding 
+        ...
+      }
+    - you can use for loop to loop over all properties
+
+==== get & set attribues: =======================
+
+1|_ Directly
+  > element.attr = 'value';
+
+2|_ throw get & set functions
+  > element.getAttribute('attr_name')
+  > element.setAttribute('attr_name', 'attr_value');
+  > element.removeAttribute('attr_name');
+
+# NOTE:
+  - Get & set functions are more recommended, it allows dealing with all attributes
+    ex: you can deal with some custom tags (user-defined elements/attributes)
+
+==== DOM navigation: =============================
+- DOM navigation means the ability of reaching the element directly
+- any tag in DOM is called Element or Node
+  ex:
+    - parent element or parent node
+    - child element or child node 
+    - siblings element or sibleing node
+
+# INFO:
+  - each node in dom can reach it's parent, child, sibling nodes.
+  - we can always start from one node & start navigation 
+
+  * Parent  : element.parentNode
+  * siblings: element.nextElementSibling && element.previousElementSibling
+  * child   : element.firstChildElement && element.lastChildElement && element.children
+
+==== Events: =====================================
+
+> ===<[ Events: ]>===============
+- click     :   => when an element has been clicked using mouse or keyboard
+- keyup     :   => happens when key is released 
+- keydown   :   => happens when key is pressed
+- mousemove :   => happens when mouving mouse on element
+- mouseover :   => happens when mouse cursor on/'over' element
+- mouseout  :   => happens when mouse cursor is out of element
+- change    :   => happens when element value/status is changed
+- focus     :   => when element is selected
+- blur      :   => when an element is not selected 
+- submit    :   => when data is submitted to server
+- load      :   => happens when static content is loaded 
+- resize    :   => heppens when mouse is resized 
+
+# NOTE:
+  - Events start with 'on', onclick, onchange ... 
+
+# Questions:    how to make element deal with handlers ? 
+  * There are 3 ways to add handlers: 
+  - Inline Event Handler    => add it directly and it's easy opetion but is not the best
+  - Event Handler Property  => add it as a property but there is better than that
+  - Event Listener          => use listenner & this is the best option
+
+> === Inline Event Handler: =====
+  - define event property in element tag 
+  <element onevent="handler()">
+
+  <script>
+    function handler() {
+      // statement
+    }
+  </script>
+
+> === Event Handler Property: ====
+  - define selector & element.property (onevent) 
+
+  <script>
+    var element = // select element 
+
+    1|> element.onevent = function handler() {}
+    2|> element.onevent = (event) => {}
+    3|> element.onevent = handler(event); 
+  </script>
+
+> === Event Listener: ===========
+  - define event selector & element.addEventListener() 
+
+  <script>
+    var element = select element object
+
+    1|> element.addEventListener('eventType', function() {});
+    2|> element.addEventListener('eventType', () {});
+    3|> element.addEventListener('eventType', handler);
+  </script>
+
+  > removeEventListener('eventType', handler);
+
+# NOTE:
+  - element can has mutli-eventListener or even duplicated eventListener
+  > Event Properties
+    * 'click':
+      - event.type
+
+    * 'keyup': 
+      - event.key
+      - event.keyCode
+
+    * 'mousemove':
+      - event.clientX
+      - event.clientY
+
+# Qhiwa:
+  - kif matan3raf HTML files are converted to DOM 
+  - DOM is nothing but an AST tree 
+  - DOM is manipulated & used  
+  - keef ma ban liya fi android studio, xml are converted in run
+    time to java classes, but javascript in browser envirement
+    execution xml are converted it, to the whole object document.
+  - DOM is a specific appraoch to parse and represent documents (HTML/XML)
+    as an object tree in memory

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title> History </title>
+  </head>
+
+  <body>
+    <h1> History </h1>
+    <button id="btn" type="button"> move to prev </button>
+    <script>
+      let btn = document.getElementById("btn");
+
+      btn.addEventListener('click', () => {
+        // window.history.back();
+        // this.history.forward();
+        window.history.go(0);
+      });
+
+    </script>
+  </body>
+</html>

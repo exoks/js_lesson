@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title> Timer </title>
+</head>
+
+<body>
+  <h1> Timer </h1>
+  <button id="timeoutBtn"> setTimeout </button>
+  <button id="intervalBtn"> setInterval </button>
+  <script>
+    let timeoutBtn = document.getElementById('timeoutBtn');
+    let intervalBtn = document.getElementById('intervalBtn');
+
+    timeoutBtn.addEventListener('click', () => {
+      window.setTimeout(() => {
+        console.log("start: timeout after 1000ms");
+      }, 1000);
+    });
+
+    intervalBtn.addEventListener('click', () => {
+      window.setInterval(() => {
+        console.log("start: interval every 1000ms");
+      }, 1000)
+    });
+
+  </script>
+</body>
+
+</html>
