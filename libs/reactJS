@@ -1,0 +1,208 @@
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣦⣴⣶⣾⣿⣶⣶⣶⣶⣦⣤⣄⠀⠀⠀⠀⠀⠀⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢠⡶⠻⠛⠟⠋⠉⠀⠈⠤⠴⠶⠶⢾⣿⣿⣿⣷⣦⠄⠀⠀⠀                 𓐓  reactJS 𓐔           
+#  ⠀⠀⠀⠀⠀⢀⠔⠋⠀⠀⠤⠒⠒⢲⠀⠀⠀⢀⣠⣤⣤⣬⣽⣿⣿⣿⣷⣄⠀⠀                                              
+#  ⠀⠀⠀⣀⣎⢤⣶⣾⠅⠀⠀⢀⡤⠏⠀⠀⠀⠠⣄⣈⡙⠻⢿⣿⣿⣿⣿⣿⣦⠀  Student: oezzaou <oussama.ezzaou@gmail.com> 
+#  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
+#  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
+#  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/28 18:38:46 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/29 14:05:39 by oezzaou
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
+#  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
+#  ⠀⠀⠀⠀⠀⡄⠀⠀⠀⠘⢧⡀⠀⠀⠸⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀                     𓄂 oussama ezzaou𓆃  
+#  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
+
+> React: Lib
+
+====<[ js: vanilla ]>==========================================================
+# INFO:
+# > vanilla (pure) js is just like vanilla in ice cream, white
+# simple nothing added to it.
+# > coding with js without using any external libs or frameworks is called
+# vanilla javascript
+# > vanilla js started as sarcasm 
+# > NAMES: core js || plain js || vanilla js
+
+====<[ React: overview ]>======================================================
+|> React or ReactJS is a <LIBRARY> used to build User Interface
+|> Traditional websites are built from different pages, moving
+  from page to another page, means removing & rendring pages.
+|> ReactJs use SPA Concept (single page application), means the web 
+  application use one single page.
+
+  > [ React: features ]
+    - SPA Concept
+    - Virtual DOM
+    - Components  : split the page to independent components 
+    - Used to build mobile application
+    - Popularity 
+
+# INFO:
+# - component is part from this conecpt of single page i guess
+
+# NOTE:
+# - Understanding React will easly help me understand other fameworks
+
+====<[ React: envirment ]>=====================================================
+- To use React you must install nodejs for:
+  - install required libs to start a project 
+  - add extranal libs 
+  - create components
+  - build projects
+  ...
+
+# INFO:
+# Nodejs is an open-source cross-platform js runtime environment that allows you
+# to execute js code outside of a web browser, it is build on google's V8 js
+# engine & it's commonly used for building scalbale, hight-performance server-side
+# and networking application.
+
+  > Nodejs keyfeatures:
+    - event-driven architecture: node.js uses an even-driven, non-blocking I/O model
+    - single-threaded with async I/O:  operates on single thread.
+    - NPM (Node package manager): node.js comes with npm  
+    - cross-platfrom: can run on various os, (linux, macos, windows)
+    - Built-in Modules: 
+
+  * Browser are designed to execute javascript in the client-side (front-end);
+    which is embedded by engines.
+
+  * Node.js takes engine (V8, ...) and extends it to work outside the browser
+    enabling javascript to be used as server-side language, & it provides 
+    some additional tools that V* does have such as:
+    - File system access: read/write files on disk
+    - network capabilities: handle HTTP, webSocket, TCP connections ..
+    - Process & system control: works with operating system resources
+    - package managment: manage external libs (NPM)
+    - npx: node package executor (exec js modules)
+      # NOTE: bhalha bhal (python -m: where -m execute python modules)
+
+
+  # TIP: 
+  # Think of node js as wrapper of V8 engine that adds server-side capabilities to js
+ 
+  # QUESTION: How Does Node.js Handle Multiple Requests While Single-Threaded?
+  # - Node.js is single-threaded in terms of executing JavaScript code,
+  # but it uses an event loop and background workers to handle multiple tasks
+  # concurrently without blocking the thread.
+  # 1. Event Loop
+  # - The event loop is at the heart of Node.js. It allows the server to process multiple
+  # tasks without waiting for one task to complete. Here's how it works:
+  # - When a request or operation (e.g., file read, database query) is initiated,
+  #   Node.js delegates it to the operating system or a worker thread (via libuv, Node.js's C-based library).
+  # - While waiting for the operation to complete, Node.js continues handling other tasks.
+  # - Once the operation finishes, its callback or promise is queued in the event loop for execution.
+  # 2. Worker Threads
+  # For CPU-intensive tasks (e.g., image processing, data compression),
+  # Node.js uses worker threads or child processes to offload work from the main thread.
+  # These are explicitly managed by the developer and not part of the event loop.
+  # NOTE: node.js is just a server that use some protocols to add js server-side
+
+====<[ React: create react project ]>==========================================
+- run the following command:
+  bashcmd: npx create-react-app <app_name>
+
+  # NOTE: [Server Application]
+  # * A server application is a program or set of code that:
+  # - Runs on a server (a physical machine or a cloud instance).
+  # - Provides services or functionality to clients over a network.
+  #      For example: Serving web pages, handling API requests, managing databases, etc.
+  # - Typically runs continuously in the background, listening for incoming client requests.
+  # TIP: ASGI/WSGI: server applications in django plays the role of a webserver 
+  # that serv dynamic content.
+  # - Node js is a runtime envirenment that host the application & provide tools
+  # and libs to build it, in the other hand ASGI server is just server that 
+  # handle async communication apps.
+
+  > [ Project: structure]
+    - node_modules: contains all project libs (modules)
+    - public: contains the static content (images, icons, json, html) 
+    - src: moulay soultan how hada, contains js components code source
+    - package.json: contains all module versions ... 
+    - README.md: use it to document your project .. 
+
+  # INFO:
+  # - DOM is the real live version of your page.
+  # - Virtual DOM: is also stored in-memory, it's copy used 
+  # by React (or other libs) to keep track of the changes in the UI 
+  # before actually modifying the real DOM
+  # - changes are made on virtual DOM, then react compares virtual DOM
+  # with real one (a process called reconciliation) and updates only the
+  # necessary parts of the real DOM.
+  # - how sahel eliya l3amaliya badalan mandir manipulation l real DOM
+  # directly minimiza liya had l9adiya (direct dom manipulation) o
+  # dar optimization l re-rendring
+  # NOTE: direct manipulation is too slow because any update cost a lot
+
+====<[ React: UI represenation ]>==============================================
+- Use the same representation of DOM.
+
+  > Create Root node;
+    - ReactDOM.createRoot(); # define the element root
+
+  > render something in component / node 
+    * is used to add an element to component # render (add element) to component 
+    - ReactDOM.render();
+
+  |> index.html: contains html template
+    <div id="root"></div>
+  |> index.js: render element in components
+    import App from 'app.js'
+    root.render(
+      <React.StrictMode>
+        <App/>
+      </React.StrictMode>
+    )
+  |> app.js : components using JSX (js xml)
+      function app() {
+        return (
+        {
+          // jsx code
+        })
+      }
+      export default app
+
+  # INFO: 
+  # - rendring in server side will simply mean provide the final
+  # HTML result to be directly rendred
+  # - naffss chi fi django server rendring simply means expanding
+  # DTL (django template language) & prepare the final HTML results
+  # to be send to client & rendred directly by browser
+
+  # NOTE: 
+  # App.js is the place where to create components & create elements inside it
+
+====<[ React: JSX ]>===========================================================
+- JSX : is <<<<SYNTAX>>>> extension for javascript that is primarily used with 
+React, it allows you to write HTML-like syntax directly withing your js code.
+- combininig markup with javascript
+
+  > ex: 
+    - JSX:
+      1|_ const user = { name: "Alice" };
+      const element = <h1>Hello, {user.name}!</h1>;
+
+    - Without JSX:
+      2|_ const name = "Alice"; 
+      const element = document.createElement('h1');
+      element.innerHTML = '<h1>Hello, ${name}!' 
+
+- in Short JSX simplifies the process of creating & managing React 
+  components
+
+  # NOTE: 
+  # Tani had rwina kamla ghir bach tsahel eliay lkhedma dyal l
+  # components, you can simply use HTML syntax to create elements
+  # & components
+
+  > [ Server-side rendring SSR: ]
+  # What Server-Side Rendering (SSR) Means
+# Server-side rendering refers to the process of rendering React components (written in JSX) on the server to generate fully rendered HTML before sending it to the client's browser. The key steps involved in SSR are:
+  #
+  #     Convert JSX to JavaScript: JSX is first transpiled (using tools like Babel) into regular JavaScript (React.createElement calls).
+  #     Render React Components on the Server: React's renderToString or renderToStaticMarkup functions are used on the server to create a static HTML representation of the component.
+  #     Send Final HTML to the Client: The server sends the fully-rendered HTML to the browser, allowing the page to load quickly with meaningful content already visible.
+  #     Hydrate the App on the Client: Once the browser receives the HTML, React takes over and hydrates it. Hydration is the process where React attaches event listeners and makes the page interactive.
+  #
+  # Why Is SSR Useful?
+
