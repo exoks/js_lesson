@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/28 18:38:46 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/29 17:34:29 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/29 16:28:55 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -206,5 +206,88 @@ React, it allows you to write HTML-like syntax directly withing your js code.
   #
   # Why Is SSR Useful?
 
-====<[ React: props ]>=========================================================
+  # NOTE: Using JSX is an optional but when you use it you will love it 
 
+  > ===<{ React: JSX RULES }>====
+  === create element: ===
+  1|_ React: 
+    const element = React.createElement('h1', {}, 'This is not a JSX code');
+
+    const root = ReactDOM.createRoot(document.getElemenById('root'));
+    root.render(element);
+
+  2|_ JSX
+    const element = <h1>This is a JSX code</h1>
+
+    const root = ReactDOM.createRoot(document.getElemenById('root'));
+    root.render(element);
+    # NOTE: while SSR JSX will be converted to js
+
+  === create group: ===
+  const element = (
+    <div>
+      <h1> Title </h1>
+      <p> paragraph </p>
+    </div>
+  );
+
+  # NOTE:
+  # |> (); is optional but add it for clean & readeable code
+  # |> tags must be gathred in one tag, otherwise an error would happen 
+  # |> it can be even ghathred in empty tag ==> ex: <> </>
+
+  === Tags: === 
+  - must be closed properly
+
+  === Expression: === (js code expantion)
+  - In HTML code you code put any JS code between '{ javascript_code }' 
+    ex:
+      > {var_name}
+      > {if (condition)? expression: expression }
+      > ...
+
+  === class in JSX: ===
+  - class is property that is used to add css classes to an element
+  - using class in JSX is forbidden, because JSX it will be converted 
+  to js code & 'class' keyword is reserved.
+  - Solution: use 'className' instead of 'class'
+    ex: <h1 className="cssClass"> Content </h1>
+
+====<[ js : Components ]>=====================================================
+- any part from the UI, (ex: navbar , register form, ...) 
+- every component in the UI is build 'independantly' & it can be 'reusable' 
+  anywhere we need to use it.
+- building a web page using the traditional way, where it's built form js &
+  html & css is pretty tiring.
+- React components is under <App/>
+
+  > [ Component Creation: ]
+    * Class Component:
+      => Syntax:
+      import React from 'react';
+
+      class Demo extends React.Component {
+        render() {
+          return (
+            <tag>
+              ...
+            </tag>
+          )
+        }
+      }
+
+    * Function Component:
+      function Component() {
+            return (
+             <tag>
+                ...
+             </tag>
+           )
+          }
+      }
+
+    # NOTE:
+    # |> No matter how you created you must follow 'pascal' syntax ex Wor...
+    # |> using function component is much easier. 
+    # |> for organization & readablity create 'components' directory
+    #   inside src directory & treat it as module
