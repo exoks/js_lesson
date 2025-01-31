@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/28 18:38:46 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/31 17:05:14 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/31 20:53:29 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -275,3 +275,78 @@ React, it allows you to write HTML-like syntax directly withing your js code.
     - onTouchMove
     - onTouchEnd
     - onTouchCancel
+
+  # NOTE:
+  # - followed method is similar to <inline event handler> in vanilla js
+  # ex:
+  #   const funEvent = () => {
+  #     // statement
+  #   }
+  #   (
+  #     <component onEvent={funEvent} >
+  #     </compoent>
+  #   );
+  #   - they say only function name must be called
+  # WARNING: ==> DO NOT PASS FUNCTION with arguments
+  # ERROR: ==> <component onEvent={funEvent(arg1, arg2, ...)}
+  # working with this syntax will immadiatly excute the function handler
+  # will not listen for it
+  # SOLUTION: function wrapper (broker) that pass arguments  
+  # ex: 
+  #   onEvent={(arg) => funEvent(arg1, arg2, ...)} |> function broker wrapper
+
+====<[ React: conditional rendering ]>=========================================
+  - you can add conditions to make JSX content more dynamic
+  # REVISION: 
+  # we know that we can use javascript in JSX but between {}
+  # this feature add dynamic code to HTML 
+
+  syntax:
+        if (condition == true)
+          return ( <componentX propr="val1" ...> );
+        else
+          return ( <componentY propr="val2" ...> );
+        # NOTE: ==> OR
+        switch (condition) {
+          true:
+            return ( <componentX propr="val1" ...> );
+          false:
+            return ( <componentY propr="val2" ...> );
+        }
+        # NOTE: ==> OR
+        (
+          <>
+            { (condition)? <componentX propr="val1" ...> : <componentY propr="val2" ...> }
+          </>
+        );
+        # NOTE: ==> OR
+        (
+          <>
+            { condition && <componentX propr="val1" ...> }
+            { !condition && <componentY propr="val2" ...> }
+          </>
+        );
+
+  # NOTE:
+  # 1 |> operator && in JSX means:
+  # if left part is true return the right
+  # part of && operator
+
+====<[ react: list ]>==========================================================
+- list means a group of elements that must be looped & displayed 
+  i user interface with the same order in JSX
+
+# INFO:
+# - map() function in js is used to apply a callback function
+# on each elemement of the original array.
+# - it does not effect the original one, it returns a new copy
+# syntax: map(callback(element, index, array), thisArg)
+#   - element: current element being processed
+#   - index (opt): index of that element
+#   - array (opt): the array that map() is working on
+#   - thisARg (opt): value to use as this when executing the callback.
+# TIP: map() can be used to map object also (look for specific attr
+# in object)
+# CONCLUSION:
+# - map() function is pretty simple, it just loop over list
+# & applay that callback that is passed
