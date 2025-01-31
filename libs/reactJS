@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/28 18:38:46 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/31 20:53:29 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/31 21:48:38 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -350,3 +350,41 @@ React, it allows you to write HTML-like syntax directly withing your js code.
 # CONCLUSION:
 # - map() function is pretty simple, it just loop over list
 # & applay that callback that is passed
+
+====<[ react: add css to components ]>=========================================
+# REVISION:  
+# * There are 3 ways to add CSS :
+#   - Inline Styling
+#   - CSS stylesheets
+#   - CSS Modules
+
+|> Inline Styling 
+    Syntax:
+      <tag style="pro1: value1 pro2: value2" /> # vanila 
+      <tag style={{propertyName: 'value'}} />   # react
+      # NOTE: OR
+      const sty1 = {
+        firstProperty: "value1",
+        secondProperty: "value2"
+      };
+      <tag style={sty1}>
+     # NOTE: properties must be in camleCase: background-color ==>
+     # backgroundColor
+
+  |> CSS stylesheets
+    1|_ put CSS classes in app.css 
+    2|_ import './App.css'
+    3|_ <tag className="className">
+
+  |> CSS Modules
+    1|_ define css selectors in name.module.css
+    2|_ import style from './name.module.css' 
+    3|_ <tag className={style.slector}> 
+
+    # NOTE: 
+    # - react will change selector names (to prevent names conflict)
+    # selectorX => .name_selectorX_FoFyA
+
+# INFO:
+# - index.css is used to put css that must be applied on all tags
+# that is used in project
