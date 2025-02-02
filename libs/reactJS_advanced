@@ -1,0 +1,100 @@
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣦⣴⣶⣾⣿⣶⣶⣶⣶⣦⣤⣄⠀⠀⠀⠀⠀⠀⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢠⡶⠻⠛⠟⠋⠉⠀⠈⠤⠴⠶⠶⢾⣿⣿⣿⣷⣦⠄⠀⠀⠀        𓐓  reactJS_advanced 𓐔           
+#  ⠀⠀⠀⠀⠀⢀⠔⠋⠀⠀⠤⠒⠒⢲⠀⠀⠀⢀⣠⣤⣤⣬⣽⣿⣿⣿⣷⣄⠀⠀                                              
+#  ⠀⠀⠀⣀⣎⢤⣶⣾⠅⠀⠀⢀⡤⠏⠀⠀⠀⠠⣄⣈⡙⠻⢿⣿⣿⣿⣿⣿⣦⠀  Student: oezzaou <oussama.ezzaou@gmail.com> 
+#  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
+#  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
+#  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/02/01 13:39:53 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/02/02 07:27:46 by oezzaou
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
+#  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
+#  ⠀⠀⠀⠀⠀⡄⠀⠀⠀⠘⢧⡀⠀⠀⠸⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀                     𓄂 oussama ezzaou𓆃  
+#  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
+
+====<[ React: routing ]>=======================================================
+> [ React: pages]
+  - Traditional web application pages are built as HTML page for each page, 
+  in addition to that we use tage <a> to add links enabling navigation 
+  between pages
+  - React pages are just one single page that has a set of components, It 
+  depends on the way of displaying pages, it can be one component fit all
+  page or part from page
+
+# WARNING:
+# - DO NOT USE <a> in React, this tag is desgined to move from HTML page to
+# another, not betwen componens
+# - In case of using it in react the whole page will be changed not only
+# component.
+
+# QUESTION: How to navigate between components ? 
+# - use react-router-dom lib 
+# - this lib is not part from react it's an external lib, you have to include it 
+# before using it
+# - to install: npm install react-router-dom@latest
+
+  > [ react-router-dom: network ]
+  - createBrowserRouter() 
+  - <RouterProvider router={}> 
+  - <Link to="path">text</Link>
+  - <NavLink = to="path"> text </NavLink> 
+  - <Outlet>
+  - useParams()
+
+  # INFO:
+  # - It is all about routing, back or read it if you need.
+
+====<[ react: designing using SASS ]>==========================================
+- SASS is a dynamic css syntax that allows you to use enables to use varibales,
+and define nested Rules, which is time optimiziation ...
+- plays the role JSX another layer on top of CSS that simplifiy the process
+of using CSS
+- sass compiler is the once responsible to handle from sass css ==> css
+- npm install sass 
+- know you can add .scss files & use them exactly like .css files
+
+
+
+====<[ react: vite tools ]>====================================================
+- tool used to create & open web application as fast as you can 
+- has been add from node 18+
+- what is beautiful about it, it allows you to define which framework you 
+want to use for building your project or what language do you want to use
+javascript / typescript
+ 
+# NOTE:
+# - Most React Developers prefer to use Vite because it is the best options
+# to build projects
+
+  > [ react: Vite]
+    1|_ npm create vite@latest
+    2|_ define:
+      |> Project name: test-app
+      |> select a framework: >> React
+      |> Select a variant: >> javascript
+
+    3|_ cd test-app && npm install => to install all libs needed for the project 
+    4|_ npm run dev => is used to run the project
+    5|_ npm run build => to create a production copy of your project
+
+====<[ react: sharing ]>======================================================= 
+> 1|> node_modules directory
+  - React projet my be large because the number of libs have 
+  - files that can be deleted and not effecting the project must no be shared
+  - delete node_modules, and tell the user to use 'npm install' to install
+all node_modules that contains all libs
+
+# TIP:
+# - All used libs are included in package.json /package.lock.json files
+# npm read from this files to know which libs must install & use
+
+- 2|> build/dist
+  - using npm run build will crate a dir dist/build that contains a copy from
+  the project, REMOVE it
+  > creaet-react-app ==> build/
+  > nmp create vite ==> dist/
+  - Log files should be deleted also
+
+# INFO:
+# - If you are using GIT don't forget to work .gitignore file 
+# add node_module, build/dist ...
