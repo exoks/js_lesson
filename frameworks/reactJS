@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/01/28 18:38:46 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/01/29 16:28:55 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/02/27 16:50:05 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -67,9 +67,9 @@
   * Browser are designed to execute javascript in the client-side (front-end);
     which is embedded by engines.
 
-  * Node.js takes engine (V8, ...) and extends it to work outside the browser
+  * Node.js takes engine (like, V8, ...) and extends it to work outside the browser
     enabling javascript to be used as server-side language, & it provides 
-    some additional tools that V* does have such as:
+    some additional tools that V8 does have such as:
     - File system access: read/write files on disk
     - network capabilities: handle HTTP, webSocket, TCP connections ..
     - Process & system control: works with operating system resources
@@ -109,8 +109,8 @@
   #      For example: Serving web pages, handling API requests, managing databases, etc.
   # - Typically runs continuously in the background, listening for incoming client requests.
   # TIP: ASGI/WSGI: server applications in django plays the role of a webserver 
-  # that serv dynamic content.
-  # - Node js is a runtime envirenment that host the application & provide tools
+  # that server dynamic content.
+  # - Node.js is a runtime envirenment that host the application & provide tools
   # and libs to build it, in the other hand ASGI server is just server that 
   # handle async communication apps.
 
@@ -141,7 +141,7 @@
     - ReactDOM.createRoot(); # define the element root
 
   > render something in component / node 
-    * is used to add an element to component # render (add element) to component 
+    * Is used to add an element to component # render (add element) to component 
     - ReactDOM.render();
 
   |> index.html: contains html template
@@ -192,8 +192,7 @@ React, it allows you to write HTML-like syntax directly withing your js code.
 
   # NOTE: 
   # Tani had rwina kamla ghir bach tsahel eliay lkhedma dyal l
-  # components, you can simply use HTML syntax to create elements
-  # & components
+  # components, you can simply use HTML syntax to create elements & components
 
   > [ Server-side rendring SSR: ]
   # What Server-Side Rendering (SSR) Means
@@ -239,7 +238,7 @@ React, it allows you to write HTML-like syntax directly withing your js code.
   === Tags: === 
   - must be closed properly
 
-  === Expression: === (js code expantion)
+  === Expression: === (js code expention)
   - In HTML code you code put any JS code between '{ javascript_code }' 
     ex:
       > {var_name}
@@ -289,5 +288,5 @@ React, it allows you to write HTML-like syntax directly withing your js code.
     # NOTE:
     # |> No matter how you created you must follow 'pascal' syntax ex Wor...
     # |> using function component is much easier. 
-    # |> for organization & readablity create 'components' directory
-    #   inside src directory & treat it as module
+    # |> for organization & readablity create 'components' directory inside src directory
+    #    and treat it as module
