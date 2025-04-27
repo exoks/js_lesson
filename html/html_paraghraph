@@ -5,12 +5,46 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/04/26 19:22:50 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/27 15:02:40 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/27 22:27:30 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
 #  ⠀⠀⠀⠀⠀⡄⠀⠀⠀⠘⢧⡀⠀⠀⠸⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀                     𓄂 oussama ezzaou𓆃  
 #  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
+
+===[ HTML: paraghraph ]=========================================================
+* paraghraph is used to 'organize text content' in a 'block of text', so it is
+  readable and well-strcutred on a web page.
+
+               >> [ paraghraph types ] <<
+                  /                  \
+                /                      \
+            [ <p> ]                  [ <pre> ]
+    - p => paraghraph           - pre => preformatted text
+    - It is a 'block-level'     - It is used to display
+      element, It means           'preformatted text'.
+      that is starts on a       - It preserve the spaces, tabs
+      new line and takes up       and line breaks.
+      the full width.           - It is used for 'code blocks' 
+    - Removes 'extra spaces'      , 'ASCII art' or anything
+      , 'extra blank lines'       where the 'exact spacing' matters
+      and 'join lines' until
+      it needs to make '\n'. 
+    - Use <br>: break line tag
+      to add new lines.
+    - Use '&nbsp;' to add extra
+      spaces.
+
+# INFO:========================================================================= 
+# - &nbsp stans for Non-Breaking SPace, as we all know html removes or collaps |
+#   the extra spaces, 'nbps' forces extra spaces.                              | 
+# - &lt; stands for less than (<), It is used to display "<" in your webpage as|
+#   text, not as part of HTML code. (simply escpae the '<' special charactere) |
+# - &amp; stands for Ampersand (&), It is used to display "&" as text.         |
+# - &nbsp;, &lt; and &amp; are called HTML Entities.                           | 
+# ==============================================================================
+
+# NOTE: HTML entities (like nbsp ...) are well explained in html_tags file. 
 
 ===[ Text formatting: ]=========================================================
 * 'Text formatting': It means display the text in better format
