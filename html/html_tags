@@ -5,18 +5,19 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/04/26 18:18:58 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/27 22:25:39 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/28 12:28:30 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
 #  ⠀⠀⠀⠀⠀⡄⠀⠀⠀⠘⢧⡀⠀⠀⠸⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀                     𓄂 oussama ezzaou𓆃  
 #  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
+
 ===[ Tags: ]====================================================================
-- Tags is 'not case sensitive', eiter  'capital letters' or 'Small letters'
+- Tag is 'not case sensitive', eiter  'capital letters' or 'Small letters'
   still the same. 
 
 ===[ Tag: <ul> <li> ... </ul>]==================================================
-> The <ul> tag in HTML stands for 'unordered list', It is used to create a list
+> <ul> tag in HTML stands for 'unordered list', It is used to create a list
   of items where the 'order does not matter' [ usually marked with bullets (*)]
   > ex:
     <ul> (paired tags)
@@ -73,7 +74,7 @@
     </p>
 
 # NOTE:=========================================================================
-# - inline element is an element that does not start a new block               |
+# - inline element is an element that does not start a new block.              |
 # ==============================================================================
 
 ===[ <hr>: Horizontal Rule ]====================================================
@@ -85,19 +86,21 @@
     <h1> 1337 is the best school ever </h1>
 
 ===[ HTML Entities: ]===========================================================
-* HTML entity is a 'special code' that browser 'interprets as a character'
+* HTML entity is a 'special code' that browser 'interprets as a character'.
   > Syntax:
       &Entity;
+
     - It starts with '&' followed by a name (nbsp, lt ...) and ends with ';'.
 
-  > Use case: represents characthere that are:
+  > [ Use case: ] represents characthere that are:
     - Reserved in THML ('<', '>', '&', ...) 
     - Invisible characters (non-breaking spaces). 
     - Symbols (like ©, ®, €, etc.). 
 
-- '<' => &lt;       | less than symbole ('<')
-- '>' => &gt;       | greater than symbole ('>') 
-- ' ' => &nbsp;     | non-breaking spaces
-- '&' => &amp;      | Ampersand characthere (&) 
+  > [ Entities Examples: ]
+    - '<' => &lt;       | less than symbole ('<')
+    - '>' => &gt;       | greater than symbole ('>') 
+    - ' ' => &nbsp;     | non-breaking spaces
+    - '&' => &amp;      | Ampersand characthere (&) 
 
 ================================================================================
