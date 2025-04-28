@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/04/26 19:22:50 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/27 22:27:30 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/28 12:47:03 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -13,8 +13,8 @@
 #  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
 
 ===[ HTML: paraghraph ]=========================================================
-* paraghraph is used to 'organize text content' in a 'block of text', so it is
-  readable and well-strcutred on a web page.
+* Paraghraph is used to 'organize text content' in a 'block of text', so it is
+  readable and well-strcutred on a webpage.
 
                >> [ paraghraph types ] <<
                   /                  \
@@ -27,7 +27,7 @@
       new line and takes up       and line breaks.
       the full width.           - It is used for 'code blocks' 
     - Removes 'extra spaces'      , 'ASCII art' or anything
-      , 'extra blank lines'       where the 'exact spacing' matters
+      , 'extra blank lines'       where the 'exact spacing' matters.
       and 'join lines' until
       it needs to make '\n'. 
     - Use <br>: break line tag
@@ -44,7 +44,7 @@
 # - &nbsp;, &lt; and &amp; are called HTML Entities.                           | 
 # ==============================================================================
 
-# NOTE: HTML entities (like nbsp ...) are well explained in html_tags file. 
+# NOTE: HTML entities (like nbsp, lt, ...) are well explained in html_tags file. 
 
 ===[ Text formatting: ]=========================================================
 * 'Text formatting': It means display the text in better format
@@ -67,7 +67,7 @@
 # |   <b>   | Bold text         | no special meaning    |   Just to make text  |
 # |         |                   |                       |  stand out visually  |
 # |---------|-------------------|-----------------------|----------------------|
-# |<strong>	| Bold text         | Important or urgent meaning	To show emphasis |
+# |<strong> | Bold text         | Important or urgent meaning To show emphasis |
 # |         |                   |                 or importance                |
 # |_________|___________________|______________________________________________|
 # - Screen readers: When using <strong>, assistive technologies may say it with
@@ -76,4 +76,35 @@
 #   the text matters more.
 # - Best practice: Use <strong> when the bold means something
 #   (like warnings, important notes), and <b> for style only.
+# ==============================================================================
+
+===[ HTML: Titles ]=============================================================
+* Headers are tags start form <h1> to <h6>
+
+- It is recomended to put <h1> as the title of the page, <h2> is title of the
+  paraghraph, <h3> for paraghraph subtitles.
+
+  > [ Why use headers: ]
+    - Organize content into sections. 
+    - Make your page 'easier to read'.
+    - help search engines understand the structure of your page (good for SEO).
+
+  > ex:
+    <h1>Main Title of the Page</h1>
+    <h2>Section Title</h2>
+    <h3>Subsection Title</h3>
+    <h4>Smaller Subsection</h4>
+    <h5>Even Smaller Heading</h5>
+    <h6>Smallest Heading</h6>
+
+  > [ Best Practice: ]
+    - Use 'one' <h1> per page.
+    - Use <h2>, <h3>, ... to create 'logical structure'
+    - 'Do not skip levels' if possible (like from <h1> directly to <h4> - it can
+      confuse readers and search engines.
+
+# TIP:==========================================================================
+# - Headers are not just for making text big or bold.                          |
+# - They are for giving meaning and structure to your content.                 |
+# - If you just want big text without meaning, use CSS instead.                |
 # ==============================================================================
