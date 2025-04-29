@@ -1,0 +1,45 @@
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣦⣴⣶⣾⣿⣶⣶⣶⣶⣦⣤⣄⠀⠀⠀⠀⠀⠀⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢠⡶⠻⠛⠟⠋⠉⠀⠈⠤⠴⠶⠶⢾⣿⣿⣿⣷⣦⠄⠀⠀⠀             𓐓  html_basics 𓐔           
+#  ⠀⠀⠀⠀⠀⢀⠔⠋⠀⠀⠤⠒⠒⢲⠀⠀⠀⢀⣠⣤⣤⣬⣽⣿⣿⣿⣷⣄⠀⠀                                              
+#  ⠀⠀⠀⣀⣎⢤⣶⣾⠅⠀⠀⢀⡤⠏⠀⠀⠀⠠⣄⣈⡙⠻⢿⣿⣿⣿⣿⣿⣦⠀   Dev: oezzaou oussama.ezzaou@gmail.com 
+#  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
+#  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
+#  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/04/25 19:01:11 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/29 12:28:28 by oezzaou
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
+#  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
+#  ⠀⠀⠀⠀⠀⡄⠀⠀⠀⠘⢧⡀⠀⠀⠸⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀                     𓄂 oussama ezzaou𓆃  
+#  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
+
+===[ HTML: Overview ]===========================================================
+- 'HTML' stands for hyperText Markup Language.
+- 'HTML' is a markup language used to separate the layout from the logic in web
+  development.
+- 'HTML' file is converted into DOM (document object model).
+- 'DOM' is manipulated by javascript. 
+- 'HTML' is used mainly to define the 'pages structure' 
+
+# NOTE:=========================================================================
+# - HTML IS NOT A PROGRAMMING language it is just a markup language.           |
+# - While you can use js to define the pages structure (ex: by creating        |
+#   elements and appending them to the DOM), IT is generally considered better |
+#   practice to keep structure (HTML), syle(CSS) and behavior (javascript)     |
+#   => This makes your code cleaner and more maintable.                        | 
+# ==============================================================================
+
+> [ HTML versions: ] 
+- HTML has different versions but what is good about it that you need to learn
+  one version and dealing with the others would be easy.
+- You need to learn 'HTML5', in this version you can add videos, musics and
+  canvas without the need of adding 'external plugins'.
+- 'Tim Bernver-lee' software engineer has been developed 'HTML' since 1989,
+  he has created 'W3C' company in 1994 to keep developing the 'HTML'. 
+  - 1989 => HTML  (Tim Bernver-lee)
+  - 1993 => HTML+ (Dave Ragget)
+  - 1995 => HTML 2.0 (group of enginners) 
+  - 1997 => HTML 3.2 (W3C)
+  - 1999 => HTML 4.01 (W3C) 
+  - 2014 => HTML 5 (W3C)
+  - 2016 => HTML 5.1 (W3C)
+  - 2017 => HTML 5.2 (W3C)
