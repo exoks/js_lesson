@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/04/26 18:18:58 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/28 12:28:30 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/29 12:30:56 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -13,10 +13,97 @@
 #  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
 
 ===[ Tags: ]====================================================================
-- Tag is 'not case sensitive', eiter  'capital letters' or 'Small letters'
+- Tag is 'not a case sensitive', either  a 'capital letters' or 'Small letters'
   still the same. 
 
-===[ Tag: <ul> <li> ... </ul>]==================================================
+                     <[ Tag Types: ]> 
+                      /            \
+                    /                \
+                  /                    \
+        [ Single Tags: ]            [ Paired Tags: ]
+          ex: - <hr/>                 ex: - <p> </p> 
+              - <br/>                     - <strong> </strong>
+
+# NOTE:=========================================================================
+# - You can use <hr> or <hr/> but it is recemended to use '/' as best practice |
+#   and good readibilty.						                                           |
+# ==============================================================================
+
+===[ Web page tags: ]===
+- In general web pages have 2  main tags:
+
+* <!DOCTYPE html>
+  - It tells the browser > 'This is an HTML5 document'
+    (IT is signal for the browser) 
+  - Without it, the browser might switch to 'quirks mode', which can cause
+    weird, outdated behavior.
+  - 
+* <head> </head> (paired tag) 
+  - It is used to define the webpage metadata. 
+  - These components are not visible for the user.
+
+* <body> </body> (paired tag)
+  - It contains the components that are visible for user
+
+===[ HTML: Tags > attributes ]===
+- Tags have 'attributes' in HTML
+
+    <tag attribute="value"> </tag>
+      - attribute: it is the attribute name
+      - value: it is the attribute value 
+
+  > ex:
+    <img src="image_path"/> (single tag)
+      - <img>: is the tag used for images 
+      - src: the attribute name wich define the imagesource 
+      - "image_path" is the attribue path that define the image path
+
+# NOTE:=========================================================================
+# - Tag with its attributes and values are called Element.		                 |
+# ==============================================================================
+
+===[ Tag: <head> ... </head> ]==================================================
+- <title> hello </title> (paired tag): it is used to define page title
+
+- <link rel="icon" type="image/x-icon" href"icon-path"
+    : used to add icon to the page
+    # NOTE:=====================================================================
+    # - The page icon is called 'favicon.ico', It is size 16 x 16.             |
+    # ==========================================================================
+
+# INFO:=========================================================================
+# - <link> tag is used to link external resources to the current html document.|
+# - It is most common role is to link a CSS stylesheet.                        | 
+# ==============================================================================
+
+===[ Tag: <body> ... </body> ]==================================================
+- In this section you can add whatever you want such as images, lists,
+  paraghraphes, links, buttons, etc....
+
+- <center> content </center>
+  * It is used to 'center-align' text or other elements.
+  > ex:
+    <center>
+      hello world
+        or 
+      <tag attr="val" .../> (single tag)
+        or
+      <tag attr="val" ... > content </tag> (paired tag)
+    </center>
+
+===[ Tag: Comments <!-- ... --> ]===============================================
+- Comment is 'special tag' in HTML 
+
+Syntax:
+  <!-- Comment -->
+
+        OR 
+
+  <!-- Comment line 1
+       Comment line 2
+       ... -->
+
+===[ Tag: <ul> <li> ... </ul>  ... <ul> ]=======================================
 > <ul> tag in HTML stands for 'unordered list', It is used to create a list
   of items where the 'order does not matter' [ usually marked with bullets (*)]
   > ex:
@@ -58,7 +145,7 @@
 #   inside a <p>.                                                              |
 # ==============================================================================
 
-===[ <br>: line break ]=========================================================
+===[ Tag: <br>: line break ]====================================================
 * It is an 'inline element' (single tag) used for 'line break' '\n'
   > Use case:
     - It is usefull when you 'do not want to start a new paragrah', just
@@ -88,12 +175,12 @@
 ===[ HTML Entities: ]===========================================================
 * HTML entity is a 'special code' that browser 'interprets as a character'.
   > Syntax:
-      &Entity;
+      &entity_name;
 
     - It starts with '&' followed by a name (nbsp, lt ...) and ends with ';'.
 
   > [ Use case: ] represents characthere that are:
-    - Reserved in THML ('<', '>', '&', ...) 
+    - Reserved in HTML ('<', '>', '&', ...) 
     - Invisible characters (non-breaking spaces). 
     - Symbols (like ©, ®, €, etc.). 
 
