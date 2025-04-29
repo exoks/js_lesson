@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/04/26 19:22:50 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/28 19:29:43 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/29 16:07:09 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -183,3 +183,30 @@ ______________________________________________________
 
   > It appears like:
       4² * log(4)₂
+
+===[ Quoted text: ]=============================================================
+* Quoted text is used to display a text that has been taken from another webpage
+  or source. There are 2 main tags you can use:
+
+                      [ Quoted text tags: ]
+                      /                   \
+                    /                       \
+            [ <q>: inline ]         [ <blockquote>: block ]
+  - It is used for 'short quotes'   - Use this for 'long quoatation' that you
+    inside a 'paraghraph <p>/<pre>'   you want to display as a 'block'
+  - It is a 'inline' element that   - It is block-level element 
+    does not break the line.        - You can use 'cite attr' to show
+  - The browser add "quotation"       the source URL.
+    "marks" around the text.          > Ex:
+    > Ex:                               <blockquote cite="url">
+      <p>he said<q>hajoubiya<q><p>          he said she is hajoubiya
+    > It appears:                       </blockquote> 
+      he said "hajoubiya"             > It appears: 
+  - This element can be 'styled'      |(indent)he said she is hajoubiya(indent)|
+    using 'CSS'.                        - It is usually indented and styled 
+                                      differently by the browser.
+
+  # NOTE:======================================================================
+  # - Quoted text is uselly displayed different than the other text, It is    |
+  #   used to show the reader quoted/copyrighted text.                        | 
+  # ===========================================================================
