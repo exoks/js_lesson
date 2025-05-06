@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/04/26 19:22:50 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/04/29 18:13:03 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/06 18:38:38 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -79,7 +79,7 @@
 # |---------------------|-----------|------------------------------------------|
 # | Human Reader        | People    | Read and understand content visually     |
 # |---------------------|-----------|------------------------------------------|
-# | Screen Reader       | Software  | Read content aloud for blind users       |
+# | Screen Reader       | Software  | Read content outloud for blind users     |
 # |---------------------|-----------|------------------------------------------|
 # | Search Engine Reader| Robots    | Analyze content for search ranking       |
 # |_____________________|___________|__________________________________________|
@@ -91,7 +91,7 @@
 # ==============================================================================
 
 ===[ Text formatting: ]=========================================================
-* 'Text formatting': It means display the text in better format
+* 'Text formatting': It means display the text in better a format
   (bold, italic, colored, ...).
 
 ===[ <strong> ... </strong> || <b> .. </b>]===
@@ -135,7 +135,7 @@
 ______________________________________________________
 |       <em>            |             <i>            |
 |-----------------------|----------------------------|
-| Emphasizes meaning    | Just visula effect (italic)|
+| Emphasizes meaning    | Just visual effect (italic)|
 |-----------------------|----------------------------|
 | Affects screan reading| No effect                  | 
 |_______________________|____________________________|
@@ -143,10 +143,10 @@ ______________________________________________________
 ===[ <del> ... </del> || <s> ... </s> ]===
 * <del> and <s> tags are used to show 'text that was removed' 
 
+- <s>: stands for 'Strikethrough: (line pass through)', is visual -- for
+       styling, no strong meaning.
 - <del>: stands for 'Deleted', It means something is deleted, It is announced
   as "deleted" by the screen reader.
-- <s>: stands for 'Strikethrough: (line pass through)',
-  is visual -- for styling, no strong meaning.
 
 ===[ <u> ... </u> || <ins> ... </ins> ]===
 * <u> and <ins> are used to 'underline' text.  
@@ -236,7 +236,7 @@ ______________________________________________________
     > ex:
 		  <address>mhamid el azzizia c' 40000 marrakech</address>
     > It appears:
-      mhamid el azzizia c' 40000 marrakech (italic sytel)
+      mhamid el azzizia c' 40000 marrakech (italic style)
 
 ===[ <cite>: Citations and References]===
 * <cite> ... </cite> (inline): used to 'reference the title of a creative work'
@@ -271,9 +271,69 @@ ______________________________________________________
 
 # NOTE:=========================================================================
 # - the font used for code formatting is named "monospace".                    |
-# - The isual effect still the same but it is good to use these tags the correct
-#   way, It helps search engines screen readers to read you web content.       |
+# - The visual effect still the same but it is good to use these tags the      |
+#   correct way, It helps search engines and screen readers to read you web    |
+#   content in good way.                                                       |
 # ==============================================================================
 
-===[ <var> ... </var> ]===
-- var tag is used for styling varibales (like X, Y in math, any other varibales)
+> [ <var> ... </var> ]
+  - var tag is used for styling varibales (like X, Y in math,
+    any other varibales)
+
+===[ Links: ]===================================================================
+* The <a> (anchor) tag is used to create 'hyprlinks', which let users 'navigate'
+  to another page, website, file, or section of the same page.
+
+  > [ Basic Syntax: ]
+    <a href="https://www.example.com">text</a> 
+  - Click on 'text' will take the user to 'https://www.example.com'
+
+> [ attributes: ]
+_____________________________________________________
+|   attributes  |               meaning             |
+|---------------|-----------------------------------|
+| href          | Destination(URL, file_path, #id)  |
+|---------------|-----------------------------------|
+| target        | Where to open link                |
+|---------------|-----------------------------------|
+| title         | Text when hovers over the link    |
+|_______________|___________________________________|
+
+===[ attr: href: ]===
+  1|> href="https://www.example.com" 
+    . This value forward the user to  https://www.example.com
+
+  2|> href="mailto:someone@example.com" 
+    . This value will open the default mail for the user and define the
+    destination by mailto:someone@example.com. 
+
+  3|> href="page.html#element_id" 
+    . This value will forwared the user to the element with 'element_id'
+    in the same page. 
+    . When you define page.html, the user will be forwarded to the element
+      with 'element_id' in 'page.html' page.
+
+  4|> href="#"
+      - It defines a virtual hyprlink, It is good for development stage.
+
+===[ attr: target ]===
+* By default the link opens in same page. If you want to change the 'target'
+  use target attribute.
+
+  1|> target="_self": Link opens in the same page (default). 
+  2|> target="_blank": Link opens in new tab. 
+  3|> target="_top" I do not know
+  4|> target="_parent" I do not know
+
+# NOTE:=========================================================================
+# - Links can be Text Link (which we discovered), button link or image link.   |
+#   These ones will discovered later.                                          |
+# ==============================================================================
+
+# QUESTION:[ How browser deals with links ? ]===================================
+# - [.html] => browser opens it in new tab.                                    | 
+# - [image] => It is opend in new tab.                                         |
+# - [.css, .js, .txt] => displayed as it is.                                   | 
+# - [otherfile] => browser will ask you to download it.                        |
+#   ex: test.zip => the browser will ask you to download test.zip.             | 
+# ==============================================================================
