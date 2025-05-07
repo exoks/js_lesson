@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/06 19:04:45 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/07 11:34:59 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/07 14:48:23 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -56,3 +56,57 @@
     - height="value": table height, 'value' >= 0. 
     - colspan="columns_nbr": makes a cell span multiple columns 
     - rowspan="rows_nbr": makes a cell span multiple rows.
+
+===[ Lists: Ordered List ]======================================================
+* Ordered list is used to display a list of items in 'specific order'.
+    ___________________________________
+    | Tag    | Description            |
+    |--------|------------------------|
+    | `<ol>` | Ordered list container |
+    |--------|------------------------|
+    | `<li>` | List item              |
+    |________|________________________|
+
+  > [ Basic Syntax: ]
+      <ol>
+        <li>list 1</li>
+        <li>list 2</li>
+        ...
+      </ol>
+
+  > [ <ol>: attrs ]
+      - type: changes numbering style ([1-infinity], [aA-zZ], ...) 
+        |> "1": Default (numbers)           | 1, 2, 3, ... 
+        |> "A": Uppercase letters           | A, B, C, ...
+        |> "a": Lowercase letters           | a, b, c, ...
+        |> "I": UpperCase Roman numerals    | I, II, III, ...
+        |> "i": LowerCAse Roman numerals    | i, ii, iii, ... 
+      - start: Changes the starting number  | default "1" => (1, A, a, I, i) 
+      - reversed: Reverse the list
+    > [ <li>: attr ]
+      - value: changes the item's list numbering. 
+      # NOTE:===================================================================
+      # - the rest of other items get's numerated based on the prev list item. |
+      # ========================================================================
+      
+      => Ex:
+	      <ol>
+	        <li>list</li>
+	        <li value="3">list</li>
+	        <li>list</li>
+	      </ol>
+
+      => It appears:
+        1. list
+        3. list
+        4. list // this one got nemurated based on the prev one.
+
+  > [ Nested <ol>: ]
+    => [ Syntax: ] 
+      <ol>
+        <li>Nested
+          <ol>
+            <li>This is a nested</li>
+          </ol>
+        </li>
+      </ol>
