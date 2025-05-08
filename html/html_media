@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/08 15:36:25 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/08 18:34:53 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/08 21:16:57 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -152,5 +152,50 @@
 # NOTE:=========================================================================
 # - The browser blinks when the video dimenstions are not defined, It renders  | 
 #   the HTML page and then load the video. That is way you should define       |
-#   video dimensions always.                                                    |
+#   video dimensions always.                                                   |
 # ==============================================================================
+
+===[ Media: <audio> ...</audio> ]===============================================
+* <audio> (paired tag): is used to 'embed audio content' like music, sound,
+  effects, or podcasts in web page.  
+  - Audio files are: .ogg, .wav, and mp3
+
+  > [ Based Syntax: ]
+    <audio controls>
+      <source src="audio_path" type="audio/[mpeg/ogg]" /> 
+      ...
+      Your Browser does not support the audio tag!
+    </audio>
+
+    # NOTE:=====================================================================
+    # - 'Your browser does not support the audio tag!' this message is         |
+    # displayed when the <audio> tag is not supported by the browser.          |
+    # ==========================================================================
+  
+  > [ <audio>: attrs ]
+     ___________________________________________________________________________
+     | Attribute  | Description                                                |
+     |------------|------------------------------------------------------------|
+     | `src`      | Path to the audio file (can be omitted if using `<source>`)|
+     |------------|------------------------------------------------------------|
+     | `controls` | Shows the browser's default audio player                   |
+     |            | (play, pause, volume, etc.)                                |
+     |------------|------------------------------------------------------------|
+     | `autoplay` | Starts playing automatically when the page loads           |
+     |            | (must be muted or user-initiated in modern browsers)       |
+     |------------|------------------------------------------------------------|
+     | `loop`     | Repeats the audio once it ends                             |
+     |------------|------------------------------------------------------------|
+     | `muted`    | Starts the audio with no sound                             |
+     |------------|------------------------------------------------------------|
+     | `preload`  | Instructs the browser how much of the audio file to preload|
+     |____________|_(`auto`,_`metadata`,_`none`)_______________________________|
+
+  > [ <source>: type attr ]
+     ___________________________________________________________________________
+     | File Extension | `type` value | Description                             |
+     |----------------|--------------|-----------------------------------------|
+     | `.mp3`         | `audio/mpeg` | - Most widely supported compressed audio|
+     | `.ogg`         | `audio/ogg`  | - Open-source format, good compression  |
+     | `.wav`         | `audio/wav`  | - Uncompressed audio, large file size   |
+     |________________|______________|_________________________________________|
