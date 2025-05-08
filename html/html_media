@@ -1,0 +1,156 @@
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣦⣴⣶⣾⣿⣶⣶⣶⣶⣦⣤⣄⠀⠀⠀⠀⠀⠀⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢠⡶⠻⠛⠟⠋⠉⠀⠈⠤⠴⠶⠶⢾⣿⣿⣿⣷⣦⠄⠀⠀⠀              𓐓  html_media 𓐔           
+#  ⠀⠀⠀⠀⠀⢀⠔⠋⠀⠀⠤⠒⠒⢲⠀⠀⠀⢀⣠⣤⣤⣬⣽⣿⣿⣿⣷⣄⠀⠀                                              
+#  ⠀⠀⠀⣀⣎⢤⣶⣾⠅⠀⠀⢀⡤⠏⠀⠀⠀⠠⣄⣈⡙⠻⢿⣿⣿⣿⣿⣿⣦⠀     Student: oezzaou oussama.ezzaou@gmail.com 
+#  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
+#  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
+#  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/08 15:36:25 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/08 18:34:53 by oezzaou
+#  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
+#  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
+#  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
+#  ⠀⠀⠀⠀⠀⡄⠀⠀⠀⠘⢧⡀⠀⠀⠸⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀⠐⠋⠀⠀⠀                     𓄂 oussama ezzaou𓆃  
+#  ⠀⠀⠀⠀⠀⠘⠄⣀⡀⠸⠓⠀⠀⠀⠠⠟⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                              
+
+===[ File Path: ]===============================================================
+* File path means the path of file (image, .js. css, .html ...)
+
+                |-----[ File Path Types: ]----|
+                |                             | 
+      [ Relative Path ]         |      [ Absolute Path ]
+  - Relative Path: points       |  - Absolute path refers to the full location
+    to a file relative to the   |    of the file starting from the root.
+    current File location.      | 
+
+  # NOTE:=======================================================================
+  # - It is recommended to use realtive path. Relative path make you project   |
+  # 'easy to move' between env.                                                |
+  # - If you move your project folder to another computer or server, relative  |
+  #   paths still work.                                                        |
+  # ============================================================================
+
+===[ Media: <img> (Single Tag) ]================================================
+* - <img> is used to 'embed an image file' in HTML page, Unlike <video>, <audio>
+    or <picture>, The <img> tag is 'self-contained' and 'does not use' <source>
+    'inside it'. 
+  - There are several types of images that works on different browsers. Theses 
+    are a set of images that works on famous browser google chromge, firefox,
+    edge and opera ...
+'.png - .apng - .gif - .jpg - .jpeg - .ico - .cur -.jfif - .pjpeg - .pjp - .svg'
+
+  # NOTE:=======================================================================
+  # - DO NOT display a lot of images in the webpage.                           |
+  # - The Browser takes too much time to load large images.                    |
+  # - Pay attention to the copyrighted images.                                 |
+  # ============================================================================
+  
+  > [ Basic Syntax: ]
+      <img src="image_path" alt="description of the image" />
+
+  > [ <img>: attrs ]
+      __________________________________________________________________________
+      | Attribute          | Description                                       |
+      |--------------------|---------------------------------------------------|
+      | `src`              | URL/path to the image file                        |
+      |--------------------|---------------------------------------------------|
+      | `alt`              | Text 'alternative' if the image can't be displayed|
+      |                    | (important for accessibility and SEO)             |
+      |--------------------|---------------------------------------------------|
+      | `width` / `height` | Specifies size (can be in pixels or percentage)   |
+      |--------------------|---------------------------------------------------|
+      # NOTE:> The above attributes are the most important ones. 
+      |--------------------|---------------------------------------------------|
+      | `loading`          | Can be `lazy` to defer loading until the image    |
+      |                    | is visible                                        |
+      |--------------------|---------------------------------------------------|
+      | `title`            | Tooltip text when the user hovers over the image  |
+      |--------------------|---------------------------------------------------|
+      | `srcset`           | Used for responsive images—defines multiple image |
+      |                    | files for different screen sizes                  |
+      |--------------------|---------------------------------------------------|
+      | `sizes`            | Works with `srcset` to define image display size  |
+      |____________________|_depending on viewport_____________________________|
+
+# INFO:========================================================================= 
+# - When the image size is not defined, It is displayed with the original size |
+# - The browser blinks if the image size is not defined.                       | 
+# - It is recommended to use CSS for image size instead of HTML attributes.    | 
+# ==============================================================================
+
+===[ Media: <video> ... </video> ]==============================================
+* - <video>: is used to 'embed a video file' directly into a webpage so users 
+  can watch it without needing a separate media player or plugin
+  video's types that can be included .mp4, .webm and .ogg.
+  - <source>: is used to specify multiple media resources for elements like
+  <picture>, <audio>, or <video>, It helps the browser choose the best file to
+  load based on factors like format, screen size, or resolution.
+
+  > [ Based Syntax: ]
+
+    <video width="X" height="Y" controls>
+      <source src="file_path" type="media/type" />
+        ...
+    </video>
+
+> [ <video>: attrs ]
+    ___________________________________________________________________________
+    | Attribute          | Description                                        |
+    |--------------------|----------------------------------------------------|
+    | `src`              | Specifies the video file (if `<source>` isn't used)|
+    |--------------------|----------------------------------------------------|
+    | `width`/`height`   | Sets the size of the video player.                 |
+    |--------------------|----------------------------------------------------|
+    | `controls`         | Displays video controls (play, pause, volume, etc.)|
+    |____________________|____________________________________________________|
+    # NOTE: The above attrs are the most important ones. 
+    |--------------------|----------------------------------------------------|
+    | `autoplay`         | Starts playing the video automatically             |
+    |                    | (may require `muted`).                             |
+    |--------------------|----------------------------------------------------|
+    | `muted`            | Starts the video with no sound. Often used with    |
+    |                    | `autoplay`                                         |
+    |--------------------|----------------------------------------------------|
+    | `loop`             | Restarts the video automatically when it ends.     |
+    |--------------------|----------------------------------------------------|
+    | `poster`           | URL of an image shown before the video plays       |
+    |                    | (like a thumbnail).                                |
+    |--------------------|----------------------------------------------------|
+    | `preload`          | Tells the browser what to preload: `auto`,         |
+    |                    | `metadata`, or `none`.                             |
+    |____________________|____________________________________________________|
+
+> [ <source>: attrs ]
+    ___________________________________________________________________________
+    | Attribute        | Description                                          |
+    |------------------|------------------------------------------------------|
+    | `src` / `srcset` | Path to the media file. Use `src` for video/audio,   |
+    |                  | `srcset` for images.                                 |
+    |------------------|------------------------------------------------------|
+    | `type`           | MIME type like `video/mp4`, `audio/ogg`,             |
+    |                  | or `image/webp`.                                     |
+    |------------------|------------------------------------------------------|
+    | `media`          | (Used in `<picture>`) Media query like CSS, e.g.,    |
+    |                  | `(min-width: 600px)`.                                |
+    |__________________|______________________________________________________|
+
+# NOTE:========================================================================
+# - Video resolution must be taken into consideration but in general 360p     |
+#   works on all devices.                                                     |
+# =============================================================================
+  > Ex:
+    <video width="360" height="200" controls>
+      <source src="https://www.example.com/video.mp4" type="video/mp4">
+      <source src="https://www.example.com/video.ogg" type="video/ogg">
+      Your browser does not support the video tag!
+    </video>
+
+    - The Browser loads the supported format, That is why we load multiple
+      sources.
+    - 'Your browser does not support the video tag' this message is displayed
+      when the <video> tag is not supported by the browser.
+
+# NOTE:=========================================================================
+# - The browser blinks when the video dimenstions are not defined, It renders  | 
+#   the HTML page and then load the video. That is way you should define       |
+#   video dimensions always.                                                    |
+# ==============================================================================
