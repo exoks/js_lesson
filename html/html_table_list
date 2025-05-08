@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/06 19:04:45 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/07 14:48:23 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/08 13:05:27 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -86,7 +86,7 @@
     > [ <li>: attr ]
       - value: changes the item's list numbering. 
       # NOTE:===================================================================
-      # - the rest of other items get's numerated based on the prev list item. |
+      # - The rest of other items get's numerated based on the prev list item. |
       # ========================================================================
       
       => Ex:
@@ -104,9 +104,72 @@
   > [ Nested <ol>: ]
     => [ Syntax: ] 
       <ol>
-        <li>Nested
+        <li>List
           <ol>
-            <li>This is a nested</li>
+            <li>Nested List</li>
           </ol>
         </li>
       </ol>
+
+  > It appears:
+    1. List 
+      1. Nested List 
+
+===[ Lists: Unordered list ]===================================================
+* Unordered list is used to display a group of related items
+  'without any order or sequence'.
+    __________________________________________
+    | Tag    | Description                   |
+    |--------|-------------------------------|
+    | `<ul>` | Stands for **unordered list** |
+    |--------|-------------------------------|
+    | `<li>` | Stands for **list item**      |
+    |________|_______________________________|
+
+> [ Basic Syntax: ]
+      <ul>
+        <li>list 1</li>
+        <li>list 2</li>
+        ...
+      </ul>
+
+  > [ <ul>: attrs ]
+    - type="value": It changes the bullet style.  
+    ___________________________________
+    | Value            | Bullet Style |
+    |------------------|--------------|
+    | `disc` (default) | ●            |
+    | `circle`         | ○            |
+    | `square`         | ■            |
+    | `none`           | No bullets   |
+    |__________________|______________|
+
+      => Ex:
+	      <ul type="square">
+	        <li>list</li>
+	        <li>list</li>
+	        <li>list</li>
+	      </ul>
+
+      => It appears:
+        ■ list
+        ■ list
+        ■ list 
+
+  > [ Nested <ul>: ]
+    => [ Syntax: ] 
+      <ul>
+        <li>Parent Nested List
+          <ul>
+            <li>Child Nested List</li>
+          </ul>
+        </li>
+      </ul>
+
+    => It appears:
+      ● Parent Nested List 
+        ○ Child Nested List // bullet style changed automaticaly by the browser. 
+      # NOTE:===================================================================
+      # - Browser changes the bullet style of each list in case of nested lists| 
+      # - You can still use the attr type in the nested list case.             |
+      # ========================================================================
