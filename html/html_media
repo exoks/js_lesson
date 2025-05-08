@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/08 15:36:25 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/08 23:35:54 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/08 23:54:30 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -24,7 +24,7 @@
 
   # NOTE:=======================================================================
   # - It is recommended to use realtive path. Relative path make you project   |
-  # 'easy to move' between env.                                                |
+  # 'easy to move' between envirments.                                         |
   # - If you move your project folder to another computer or server, relative  |
   #   paths still work.                                                        |
   # ============================================================================
@@ -32,8 +32,8 @@
 ===[ Media: <img> (Single Tag) ]================================================
 * - <img> is used to 'embed an image file' in HTML page, Unlike <video>, <audio>
     or <picture>, The <img> tag is 'self-contained' and 'does not use' <source>
-    'inside it'. 
-  - There are several types of images that works on different browsers. Theses 
+    tag 'inside it'. 
+  - There are several types of images that works on different browsers. There 
     are a set of images that works on famous browser google chromge, firefox,
     edge and opera ...
 '.png - .apng - .gif - .jpg - .jpeg - .ico - .cur -.jfif - .pjpeg - .pjp - .svg'
