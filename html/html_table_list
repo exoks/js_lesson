@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/06 19:04:45 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/08 13:05:27 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/08 13:22:01 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -126,7 +126,7 @@
     | `<li>` | Stands for **list item**      |
     |________|_______________________________|
 
-> [ Basic Syntax: ]
+> [ basic syntax: ]
       <ul>
         <li>list 1</li>
         <li>list 2</li>
@@ -173,3 +173,33 @@
       # - Browser changes the bullet style of each list in case of nested lists| 
       # - You can still use the attr type in the nested list case.             |
       # ========================================================================
+
+===[ Lists: Description List ]==================================================
+* Description List is used to represent 'pairs of terms and their descriptions' 
+________________________________________________________________________________
+| Tag    | Meaning                | Description                                |
+|--------|------------------------|--------------------------------------------|
+| `<dl>` | Description List       | Wraps the entire list                      |
+| `<dt>` | Description Term       | The item or keyword being defined          |
+| `<dd>` | Description Definition | The explanation or description of the term |
+|________|________________________|____________________________________________|
+
+  > [ Basic Syntax: ]
+    <dl>
+      <dt>Description Term 1</dt>
+      <dd>- Description definition 1<dd>
+      <dd>- Description definition 2<dd>
+      <dt>Description Term 2</dt>
+      <dd>- Description definition 1<dd>
+      <dd>- Description definition 2<dd>
+    </dl>
+
+  > It appears:
+      Description Term 1
+        - Description definition 1
+        - Description definition 2
+      Description Term 2
+      - Description definition 1
+      - Description definition 2
+
+  # NOTE: Use this Tag for key-values pairs  
