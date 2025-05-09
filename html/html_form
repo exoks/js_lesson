@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/09 00:05:07 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/09 12:11:18 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/09 12:55:06 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -93,3 +93,29 @@ ________________________________________________________________________________
     - type="range"    | range bar 
     - type="checkbox" | checkbox 
     - type="radio"    | radio (something like checkbox)
+
+===[ Form: <label> ...</label> ]================================================
+* <label> tag in HTML is used to 'associate a text description with a form'
+'control', It is simply used to name an element.
+  > example:
+    # It is not recommended to name element like this
+    User Name<br><br>
+    <input type="text" id="elem_name" />
+    # Use <label> instead
+    <label for="elem_name">User name</label><br>
+    <input type="text" id="elem_name" />
+
+# NOTE:========================================================================
+# - If you use the first method the browser won't know that username is       |
+#   associted to <input>, When the user select username text, It won't be     |
+#   selected, in the other hand with <label> tag the input will be selected.  |
+# - <label> tag importance is shown when using cellphones instead of pc,      |
+#   selecting the input in cellphone is hard, linking the elements reduce the |
+#   range of selection.                                                       | 
+# - <label> tag adds more styling features the input.                         | 
+# =============================================================================
+
+> [ Why Use <label> ?]
+  |> Allows users to click on the label to focus the input
+  |> Improves form usability and accessibility
+  |> Associates text with a form element
