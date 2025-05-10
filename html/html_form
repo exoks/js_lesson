@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/09 00:05:07 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/10 15:56:00 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/10 16:57:32 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -115,8 +115,8 @@ ________________________________________________________________________________
 #   selected, in the other hand with <label> tag the input will be selected.  |
 # - <label> tag importance is shown when using cellphones instead of pc,      |
 #   selecting the input in cellphone is hard, linking the elements reduce the |
-#   range of selection.                                                       | 
-# - <label> tag adds more styling features the input.                         | 
+#   range of selection.                                                       |
+# - <label> tag adds more styling features the input.                         |
 # =============================================================================
 
 > [ Why Use <label> ?]
@@ -212,3 +212,38 @@ ________________________________________________________________________________
   # |- Only supports `value` text |- Can contain HTML, icons, text, etc.|
   # |- Limited                    |- More flexible and customizable     |
   # |_____________________________|_____________________________________|
+
+===[ Form: CheckBox ]===========================================================
+* <input type="checkbox" />: is an input field that lets the user 'select one'
+  'or more options from a set'. Unlike radio buttons, where only one option can
+  be selected.
+
+  > [ Basic Syntax: ]
+    <input type="checkbox" value="value" name="data_name" /> 
+
+  > [ Checkbox: attrs ]
+    ____________________________________________________________________________
+    | Attribute   | Description                                                |
+    |-------------|------------------------------------------------------------|
+    | `name`      | Groups checkboxes under a common name (for form submission)|
+    | `value`     | The value sent to the server when checked                  |
+    | `checked`   | Makes the box checked by default                           |
+    | `disabled`  | Disables the checkbox                                      |
+    | `required`  | (Not commonly used on checkboxes)                          |
+    |_____________|____________________________________________________________|
+
+  - name and value define the data that would be sent when submitting the form.
+  - If checkboxes has different names, Data would be seperated. In this case
+    we can gather all the data in one array by defining the same name attr.
+    > Ex:
+      name="options[]" // Do not forget to add '[]'
+      the data submited would be like this:
+
+      name: option1, option2, ... optionN
+      // instead of
+
+      name1: option1
+      name2: option2
+      ...
+      nameN: optionN 
+
