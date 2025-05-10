@@ -5,7 +5,7 @@
 <!--  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              -->
 <!--  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              -->
 <!--  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/09 12:46:39 by oezzaou-->
-<!--  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/09 12:54:19 by oezzaou-->
+<!--  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/10 14:25:58 by oezzaou-->
 <!--  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              -->
 <!--  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              -->
 <!--  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      -->
@@ -21,9 +21,31 @@
 </head>
 
 <body>
+  <!---------------------------- Input Fields --------------------------------->
   <form method="get" autocomplete="off">
+    <!-- Text input -->
     <label for="input_id">Username</label></br>
-    <input type="text" id="input_id" /><br>
+    <input type="text" id="input_id" placeholder="username" name="username" /></br>
+
+    <!-- Password input -->
+    <label for="pass_id">Password</label></br>
+    <input id="pass_id" type="password" required /></br>
+
+    <!-- Email input -->
+    <label for="email_id">Email</label></br>
+    <input id="email_id" type="email" /></br>
+
+    <!-- Number input -->
+    <label for="number_id">Number</label></br>
+    <input id="number_id" type="number" disabled /></br>
+
+    <!-- Textarea input -->
+    <label for="disc">Summary</label></br>
+    <textarea id="disc" name="disc" placeholder="discription" rows="10" cols="20">default value</textarea></br>
+
+    <!--------------------------- Input Buttons ------------------------------->
+    <!-- Sumbit button -->
+    <input type="submit" value="Sumbit the form" />
   </form>
 </body>
 
