@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/09 00:05:07 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/10 16:57:32 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/10 17:15:24 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -221,6 +221,10 @@ ________________________________________________________________________________
   > [ Basic Syntax: ]
     <input type="checkbox" value="value" name="data_name" /> 
 
+  > [ Best practice: ]
+    <input id="id" type="checkbox" value="opt_value" name="opt_name" /> 
+    <label for="id">Opt_value</label>
+
   > [ Checkbox: attrs ]
     ____________________________________________________________________________
     | Attribute   | Description                                                |
@@ -247,3 +251,34 @@ ________________________________________________________________________________
       ...
       nameN: optionN 
 
+===[ Form: radio ]==============================================================
+* <input type="radio">: used when you want the user to 'select only one option'
+  from group. Unlike checkboxes where multiple can be selected
+
+  > [ Basic Syntax: ]
+    <input type="radio" name="option_name" value="option_value1" />
+    <input type="radio" name="option_name" value="option_value2" />
+
+  > [ Best Practice: ]
+    <input id="op1" type="radio" name="option_name" value="option_value1" />
+    <label for="op1">option_value1<label> 
+
+    <input id="op2" type="radio" name="option_name" value="option_value2" />
+    <label for="op2">option_value2<label> 
+
+  # NOTE:=======================================================================
+  # - all radio buttons must share the same `name` for them.                   |
+  # - It is logic because we only want to choose one option from a group       | 
+  #   name: (op1, or op2 ...)                                                  |
+  # - Browser group the radio buttons based on their names.                    |
+  # ============================================================================
+  
+  > [ Radio: attrs ]
+  ______________________________________________________________________________
+  | Feature    | Description                                                   |
+  |------------|---------------------------------------------------------------|
+  | `name`     | Groups radio buttons — only **one per group** can be selected |
+  | `value`    | The data sent to the server if selected                       |
+  | `checked`  | Makes this option selected by default                         |
+  | `disabled` | Disables the radio button                                     |
+  |____________|_______________________________________________________________|
