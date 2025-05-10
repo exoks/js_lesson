@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/09 00:05:07 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/09 12:55:06 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/10 14:23:39 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -41,11 +41,11 @@ ________________________________________________________________________________
 | `accept-charset` | - Specifies character encodings the server accepts        |
 |__________________|___(like `UTF-8`)__________________________________________|
 
-  - Every From must have 'submit button' (<input type="submit" />)
+  - Every Form must have 'submit button' (<input type="submit" />)
   - Click on submit button means sending 'get' or 'post' request.
   - Every Input must have an 'attr name', this attr helps the browser to build
-    the body of the request in json form.
-    > ex:
+    the body of the HTTP request POST | URL in 'GET' request.
+    > ex (POST):
       [
         name: value 
         ...
@@ -53,57 +53,61 @@ ________________________________________________________________________________
 
   > [ How It Works: ]
     - When the user fills in the form and hits 'Submit', the browser sends the
-      data to the URL in the 'action' using HTTP method
+      data to [ the URL in the 'action' ] using HTTP method
       - If it is a `GET` request, the data is sent as part of the URL.
       - If it is `POST` request the data is sent in the request body. 
 
 # INFO:========================================================================= 
-# - GET request does not have a body, It is used to retrieve data, not to      |
+# - GET request does not have a body, It is used to 'retrieve' data, not to    |
 #   submit large or sensitive input, That is why GET request send data using   |
 #   the URL query string (after ?symbol)                                       |
 # - Any parameters are added directly to the URL like this:                    |
-#   GET /search?qapple&page=2 HTTP/1.1                                         |
-#   Host: example.com                                                          |
-# - POST request do include a body, which is where form data is placed:        |
+#     GET /search?qapple&page=2 HTTP/1.1                                       |
+#     Host: example.com                                                        |
+# - POST request does include a body, which is where from data is placed:      |
 #   POST /submit HTTP/1.1                                                      |
-#   Host: example.com                                                          |
-#   Content-Type: application/x-www-form-urlencoded                            |
+#     Host: example.com                                                        |
+#     Content-Type: application/x-www-form-urlencoded                          |
 #                                                                              |
-#   username="john&password"&password=1234                                     |
+#     username="john&password"&password=1234                                   |
 # ==============================================================================
 
 -> [ Tags used in the form: ]
 - '<label>': used to name the element in the form
 - '<button>': used to define button
-- '<textarea>': 
-- '<select>': used to get a menu
+- '<textarea>': used to define a multi-line text input unlike the single input 
+- '<select>': 
 - '<datalist>':
 - '<fieldset>':
-- '<input>': The most important one, used to get different s  hapes.
+- '<input>': The most important one, used to get different shapes.
 
--> [ <input>: shapes ]
-    - type="text"     | textview for text (default)
-    - type="password" | textview for password
-    - type="number"   | text view for numbers
-    - type="email"    | text view for email
-    - type="button"   | normal button
-    - type="sumbit"   | form submit button
-    - type="reset"    | reset button
-    - type="file"     | button to upload a file
-    - type="range"    | range bar 
-    - type="checkbox" | checkbox 
-    - type="radio"    | radio (something like checkbox)
+> [ <input>: shapes ]
+    > Type       | Purpose                    
+    - `text`     | Single-line text input (text field)
+    - `password` | Hides text for passwords
+    - `email`    | Email format validation
+    - `number`   | Numeric input
+    - `checkbox` | Multiple-choice option
+    - `radio`    | Single-choice from a group
+    - `submit`   | Submit the form
+    - `file`     | File upload
+    - `button`   | Clickable button
+    - `date`     | Date picker
+    -------------|-------------------------------------
+    - Total      | 10 Input Types
 
 ===[ Form: <label> ...</label> ]================================================
 * <label> tag in HTML is used to 'associate a text description with a form'
 'control', It is simply used to name an element.
   > example:
-    # It is not recommended to name element like this
-    User Name<br><br>
-    <input type="text" id="elem_name" />
-    # Use <label> instead
-    <label for="elem_name">User name</label><br>
-    <input type="text" id="elem_name" />
+    <form>
+      # It is not recommended to name element like this
+      User Name<br><br>
+      <input type="text" id="elem_name" />
+      # Use <label> instead
+      <label for="elem_name">User name</label><br>
+      <input type="text" id="elem_name" />
+    </form>
 
 # NOTE:========================================================================
 # - If you use the first method the browser won't know that username is       |
@@ -119,3 +123,69 @@ ________________________________________________________________________________
   |> Allows users to click on the label to focus the input
   |> Improves form usability and accessibility
   |> Associates text with a form element
+
+===[ Form: Input types: ]=======================================================
+  * We can Catigorize `<input>` into two main types based on their purpose:
+
+                     |--------[ Input Types: ]--------| 
+                     |                                |
+              [ Input Fields ]                  [ Input Buttons ]
+  * Allows user to enter or select   |   * It is used to 'trigger actions'. 
+    the data.                        |     - sumbit 
+    - text                           |     - reset
+    - password                       |     - button 
+    - number                         |     - file
+    - email                          |
+    - checkbox                       |
+    - radio                          |
+  -----------------------------------|--------------------------------------
+    - text area (<textarea/>)        |     - Button <button>
+
+===[ Form: Input Fields  (Single Tag) ]==========================================
+* <input> tag is used to 'create interactive form controls' for user input -
+  such as text field, checkboxes, radio buttons, file uploads, etc. 
+
+  > [ Based Syntax: ]
+    <input type="input_type" />
+
+  > [ <input>: attributes ]
+    ____________________________________________________________________
+    | Attribute     | Description                                      |
+    |---------------|--------------------------------------------------|
+    | `id`          | - assign an id for an input element              |
+    | `name`        | - Key used to send the input value to the server |
+    | `value`       | - Default value of the input                     |
+    | `type`        | - define the type input (text field, checkbox...)| 
+    | `placeholder` | - Hint text inside the field                     |
+    | `required`    | - Makes the field mandatory                      |
+    | `readonly`    | - Makes the field uneditable                     |
+    | `disabled`    | - Disables the input                             |
+    | `size`        | - Size of the input                              |
+    | `maxlength`   | - Limits character input                         |
+    |_______________|__________________________________________________|
+
+  # NOTE: Default type for the input is 'text'
+
+> [ Form: <textarea> Multi-line text ]
+  * <textarea> is used to create a multi-line text input field -- unlike
+  <input type="text" /> which only allows a single line, It is usually used when
+  to ask for address or summary.
+
+  > [ Based Syntax: ]
+    <textarea >Text field (default value)</textarea>
+
+  > [ <textarea>: attrs ]
+    _________________________________________________________________
+    | Attribute     | Description                                   |
+    |---------------|-----------------------------------------------|
+    | `name`        | The key used to send the text to the server   |
+    | `rows`        | Number of visible text lines (height)         |
+    | `cols`        | Number of visible characters per line (width) |
+    | `placeholder` | Hint text shown when empty (HTML5)            |
+    | `maxlength`   | Maximum number of characters allowed          |
+    | `required`    | Makes the field mandatory                     |
+    | `readonly`    | Makes it uneditable                           |
+    | `disabled`    | Disables the field                            |
+    |_______________|_______________________________________________|
+
+===[ Form: Input Buttons: ]==========================================
