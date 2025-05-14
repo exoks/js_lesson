@@ -5,7 +5,7 @@
 #  ⢀⠔⠉⠀⠊⠿⠿⣿⠂⠠⠢⣤⠤⣤⣼⣿⣶⣶⣤⣝⣻⣷⣦⣍⡻⣿⣿⣿⣿⡀                                              
 #  ⢾⣾⣆⣤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠉⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇                                              
 #  ⠀⠈⢋⢹⠋⠉⠙⢦⠀⠀⠀⠀⠀⠀⢀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇       Created: 2025/05/09 00:05:07 by oezzaou
-#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/10 17:15:24 by oezzaou
+#  ⠀⠀⠀⠑⠀⠀⠀⠈⡇⠀⠀⠀⠀⣠⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠇       Updated: 2025/05/14 16:13:38 by oezzaou
 #  ⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⢀⣾⣿⣿⠿⠟⠛⠋⠛⢿⣿⣿⠻⣿⣿⣿⣿⡿⠀                                              
 #  ⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⢠⣿⣟⣭⣤⣶⣦⣄⡀⠀⠀⠈⠻⠀⠘⣿⣿⣿⠇⠀                                              
 #  ⠀⠀⠀⠀⠀⠱⠤⠊⠀⢀⣿⡿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠘⣿⠏⠀⠀                             𓆩♕𓆪      
@@ -72,14 +72,14 @@ ________________________________________________________________________________
 #     username="john&password"&password=1234                                   |
 # ==============================================================================
 
--> [ Tags used in the form: ]
-- '<label>': used to name the element in the form
-- '<button>': used to define button
-- '<textarea>': used to define a multi-line text input unlike the single input 
-- '<select>': 
-- '<datalist>':
-- '<fieldset>':
-- '<input>': The most important one, used to get different shapes.
+# -> [ Tags used in the form: ]
+# - '<label>': used to name the element in the form
+# - '<button>': used to define button
+# - '<textarea>': used to define a multi-line text input unlike the single input 
+# - '<select>': 
+# - '<datalist>':
+# - '<fieldset>':
+# - '<input>': The most important one, used to get different shapes.
 
 > [ <input>: shapes ]
     > Type       | Purpose                    
@@ -282,3 +282,34 @@ ________________________________________________________________________________
   | `checked`  | Makes this option selected by default                         |
   | `disabled` | Disables the radio button                                     |
   |____________|_______________________________________________________________|
+
+===[ Form: <select> ]===========================================================
+* <select>...</select> is used to create a 'drop-down list', allowing users to
+  'select one or more options' from a list of 'predefined choices'. 
+
+  > [ Basic Syntax: ]
+    <select name="X_name">
+      <option value="val1">option1</option>
+      <option value="val2">option2</option>
+      ...
+      <option value="valN">optionN</option>
+    </select>
+
+    - When submitted the select value (option[1,N]) is sent with name (X_name)
+        X_name=val[1, N] 
+
+  > [ <select>: attrs ]
+    __________________________________________________________ 
+    | Attribute  | Description                               |
+    |------------|-------------------------------------------|
+    | `name`     | - The name sent to the server on submit   |
+    | `id`       | - Used to link a <label> or for scripting |
+    | `multiple` | - Allows selection of multiple options    |
+    | `disabled` | - Disables the drop-down                  |
+    | `required` | - Makes selection mandatory before submit |
+    |____________|___________________________________________|
+
+    # NOTE:=====================================================================
+    # - You can use "selected" attr with <option> tag.                         |
+    # - It is used to select the default value for a tag.                      |
+    # ==========================================================================
